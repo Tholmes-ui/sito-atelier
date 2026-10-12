@@ -5,7 +5,7 @@
 > **consulta qui**. Se un dato cambia, si aggiorna qui **e** sul sito.
 
 - **Stato raccolta dati:** 🟡 in corso (prime risposte ricevute)
-- **Ultimo aggiornamento:** 12 ottobre 2026 — nome attività, elenco servizi
+- **Ultimo aggiornamento:** 12 ottobre 2026 — nome attività, servizi, telefono
 
 ---
 
@@ -19,7 +19,7 @@
 | Slogan / frase | — *mancante* — | (facoltativo) |
 | Descrizione breve (2–4 righe) | — *mancante* — | hero, sezione contatti |
 | Servizi offerti | vedi **Elenco servizi** qui sotto | hero, sezione contatti, modulo |
-| Partita IVA / C.F. | — *mancante* — | fondo pagina |
+| Partita IVA / C.F. | ⏳ da fornire in seguito (dalla cliente) | fondo pagina |
 
 ### Elenco servizi (testo fornito dalla cliente)
 
@@ -47,13 +47,13 @@ va rifatta su questi servizi (oggi contiene voci generiche).
 
 | Voce | Valore | Dove appare |
 | --- | --- | --- |
-| Telefono (visualizzato) | — *mancante* — | contatti, footer |
-| Link telefono (`tel:`) | — | contatti, footer |
-| Numero WhatsApp | — | contatti, footer, social |
-| Link WhatsApp (`wa.me/…`) | — | contatti, footer |
+| Telefono (visualizzato) | **+39 331 357 5006** | contatti, footer, header |
+| Link telefono (`tel:`) | `tel:+393313575006` | contatti, footer, header |
+| Numero WhatsApp | ⏳ da confermare (è lo stesso del telefono?) | contatti, footer, social |
+| Link WhatsApp (`wa.me/…`) | ⏳ da confermare | contatti, footer |
 | Email | — *mancante* — | contatti, footer |
 | Email per Web3Forms | — *mancante* — | (solo nel modulo, non visibile) |
-| Indirizzo completo | — | contatti, footer |
+| Indirizzo completo | — *mancante* — | contatti, footer |
 | Link Google Maps | — | (facoltativo) |
 
 ## 3. Orari di apertura

@@ -79,10 +79,12 @@ veri**: al momento sono testi e foto segnaposto.
       scrittore/codice; **Coniglietto Spaziale** 🐰 = Space Bunny, reparto
       immagini; **Prof. Felino** 🐈 = LongCat, insegnante/lezioni. I nomi dei
       modelli restano la risposta ufficiale a "che modelli usi?".
-- [ ] **Link pagina Facebook**: manca l'indirizzo esatto (nel codice c'è un
-      commento che lo segnala). Temporaneamente porta alla home di Facebook.
-- [ ] **WhatsApp**: si è usato lo stesso numero del telefono
-      (`+39 331 357 5006`) — **da confermare** con la cliente.
+- [x] **WhatsApp**: ✅ **confermato dalla cliente (12/10/2026)** — è lo stesso
+      numero del telefono (`+39 331 357 5006`, link `wa.me/393313575006`).
+      Il sito già lo usa, nessuna modifica necessaria.
+- [ ] **Link pagina Facebook**: ancora mancante — **lo cerca l'utente di persona**
+      (aprire la pagina e copiare l'indirizzo dalla barra del browser).
+      Temporaneamente porta alla home di Facebook.
 - [x] **Orari**: la cliente non vuole orari specifici (su appuntamento). Ha
       indicato la disponibilità generale **nei giorni lavorativi lun–ven**.
       Il sabato (su richiesta) esiste ma **per ora non si pubblica** (richiesta

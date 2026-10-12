@@ -49,8 +49,8 @@ va rifatta su questi servizi (oggi contiene voci generiche).
 | --- | --- | --- |
 | Telefono (visualizzato) | **+39 331 357 5006** | contatti, footer, header |
 | Link telefono (`tel:`) | `tel:+393313575006` | contatti, footer, header |
-| Numero WhatsApp | ⏳ da confermare (è lo stesso del telefono?) | contatti, footer, social |
-| Link WhatsApp (`wa.me/…`) | ⏳ da confermare | contatti, footer |
+| Numero WhatsApp | ✅ **confermato (12/10/2026): è lo stesso numero del telefono** (+39 331 357 5006) | contatti, footer, social |
+| Link WhatsApp (`wa.me/…`) | ✅ **confermato**: `https://wa.me/393313575006` (già usato nel sito) | contatti, footer |
 | Email | **laboratorio.sastyle@gmail.com** | contatti, footer |
 | Email per Web3Forms | ⏳ probabilmente la stessa (da confermare) | (solo nel modulo, non visibile) |
 | Indirizzo da mostrare | **Caselle Torinese (TO)** — solo il comune | contatti, footer |
@@ -92,7 +92,7 @@ venerdì".
 | Piattaforma | Link o nome utente |
 | --- | --- |
 | Instagram | `sastyle_lab` → `https://www.instagram.com/sastyle_lab/` |
-| Facebook | pagina **"SàStyle"** → ⏳ **serve il link esatto** (vedi nota) |
+| Facebook | pagina **"SàStyle"** → ⏳ **serve il link esatto** (lo cerca l'utente di persona) |
 | TikTok | `@sastylelab` → `https://www.tiktok.com/@sastylelab` |
 | Altri | — *mancante* — |
 

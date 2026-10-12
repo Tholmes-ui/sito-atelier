@@ -5,7 +5,7 @@
 > **consulta qui**. Se un dato cambia, si aggiorna qui **e** sul sito.
 
 - **Stato raccolta dati:** 🟡 in corso (prime risposte ricevute)
-- **Ultimo aggiornamento:** 12 ottobre 2026 — nome attività, servizi, telefono, email
+- **Ultimo aggiornamento:** 12 ottobre 2026 — nome attività, servizi, telefono, email, indirizzo
 
 ---
 
@@ -53,8 +53,21 @@ va rifatta su questi servizi (oggi contiene voci generiche).
 | Link WhatsApp (`wa.me/…`) | ⏳ da confermare | contatti, footer |
 | Email | **laboratorio.sastyle@gmail.com** | contatti, footer |
 | Email per Web3Forms | ⏳ probabilmente la stessa (da confermare) | (solo nel modulo, non visibile) |
-| Indirizzo completo | — *mancante* — | contatti, footer |
-| Link Google Maps | — | (facoltativo) |
+| Indirizzo da mostrare | **Caselle Torinese (TO)** — solo il comune | contatti, footer |
+| Via e civico | 🚫 **da NON pubblicare** (laboratorio privato) | — |
+| Link Google Maps | 🚫 non serve (nessun negozio aperto al pubblico) | — |
+| Ricevimento clienti | ⏳ da confermare (su appuntamento?) | testi |
+
+> ⚠️ **Nota importante — indirizzo e luogo di lavoro**
+> Sabrina ha la **Partita IVA** ma **non ha un negozio aperto al pubblico**: lavora
+> in uno **spazio privato** a **Caselle Torinese (TO)**. Conseguenze sul sito:
+> - si mostra **solo "Caselle Torinese (TO)"**, **mai via e civico**;
+> - **niente mappa** e niente invito a "passare in negozio";
+> - i clienti si contattano per **telefono, WhatsApp, email o modulo**;
+> - se riceve solo **su appuntamento**, lo scriveremo nei testi.
+>
+> Gli orari vanno quindi presentati come **orari di lavoro / disponibilità al
+> telefono**, non come orari di apertura di un negozio.
 
 ## 3. Orari di apertura
 
@@ -77,7 +90,7 @@ Giorni di chiusura / note: —
 | Instagram | — |
 | Facebook | — |
 | TikTok | — |
-| Altri | — |
+| Altri | — *mancante* — |
 
 ## 5. Foto dei lavori
 

@@ -48,6 +48,11 @@ veri**: al momento sono testi e foto segnaposto.
       (vedi `DATI_ATTIVITA.md`), da applicare al codice.
 - [ ] Aggiornare i testi della hero e la descrizione: non "sartoria generica"
       ma laboratorio specializzato in **pelle e pelliccia**.
+- [ ] **Indirizzo privato**: nel footer la sezione "Dove trovarmi" deve perdere
+      via e civico → resta solo **"Caselle Torinese (TO)"**, con nota tipo
+      *"Laboratorio privato, ricevimento su appuntamento"*. Niente mappa.
+- [ ] **Orari**: presentarli come *disponibilità*, non come orari di negozio
+      (non c'è un negozio aperto al pubblico).
 
 ## Domande aperte (in attesa di risposta)
 

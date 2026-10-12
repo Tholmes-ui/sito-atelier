@@ -87,6 +87,9 @@ veri**: al momento sono testi e foto segnaposto.
 1. **Sostituire le 5 foto** `images/foto-1.svg` … `foto-5.svg` con le foto vere dei lavori.
 2. **Creare la chiave Web3Forms** (https://web3forms.com) e incollarla in
    `index.html` al posto di `INSERISCI_QUI_LA_TUA_ACCESS_KEY`.
+   ⏳ **RINVIATA (12/10/2026)**: l'utente **ha accesso alla Gmail dell'atelier**
+   (`laboratorio.sastyle@gmail.com`), quindi la crea lui — ma **oggi non si fa**.
+   → vedi voce dedicata più sotto (con i passi).
 3. (Opzionale) Collegare un **dominio personalizzato** tipo `sastylelab.it`.
 
 ### Modifiche tecniche emerse man mano che arrivano i dati
@@ -126,6 +129,27 @@ veri**: al momento sono testi e foto segnaposto.
       ⚠️ **Aggiornamento:** il file `images/logo-sastyle.svg` **ora esiste**
       (trovato nella cartella e committato). Da decidere se usarlo nell'header
       al posto della scritta semplice "SàStyle Lab".
+- [x] **DUE VERSIONI DEL CAROSELLO** (12 ottobre 2026, Coniglietto Spaziale,
+      su richiesta dell'utente): entrambe **1600 x 900**, capo intero e
+      centrato, nessuna distorsione.
+      - **Versione A** `images/foto-1.jpg` ... `foto-5.jpg` — sfondo **sfumatura**
+        costruita con i colori della foto (media del bordo) + alone in alto.
+        Piu' sobria, "da studio".
+      - **Versione B** `images/foto-1-sfocata.jpg` ... `foto-5-sfocata.jpg` —
+        sfondo = **la foto stessa sfocata**. Perche' non risulti distorta:
+        (1) non si stira mai, si ritaglia il pezzo centrale con il rettangolo
+        sorgente esplicito; (2) si sfoca **prima** di ingrandiare (riduzione a
+        96x54, che fa la media dei colori) e solo dopo si riporta a 1600x900,
+        cosi' spariscono le sagome dei cappotti; (3) velo color crema del sito
+        per stemperare il contrasto.
+      ⏳ **Da decidere**: quale versione mettere nel sito. I file sono gia'
+      pronti con entrambi i nomi, quindi si tratta solo di sapere quale serie
+      tenere come `foto-N.jpg`.
+      Comandi: `16x9.ps1 -TipoSfondo sfumatura|foto -Cartella <orig> -Out <dest>`.
+      Attenzione: per rifare le foto servono gli **originali verticali**,
+      recuperabili con `git show 9f8e1e7:images/foto-1.jpg > file`, perche' le
+      16:9 hanno sovrascritto gli originali nella cartella di lavoro.
+
 - [x] **FOTO CAROSELLO 16:9** (12 ottobre 2026, **Coniglietto Spaziale** /
       Space Bunny, su commessa di `COMMESSA_FOTO.md`): tutte e 5 le foto in
       `images/` sono ora **1600 x 900 px (16:9)**, sovrascritte con lo stesso
@@ -162,6 +186,21 @@ veri**: al momento sono testi e foto segnaposto.
       ⏳ **Non ancora usato nel sito**: header e footer mostrano ancora la
       scritta semplice "SàStyle Lab" in carattere.
 - [ ] **P.IVA**: arriva più avanti (segnaposto rimasto in fondo pagina).
+- [ ] **Chiave Web3Forms — RINVIATA** (12/10/2026): è **l'ultimo pezzo che
+      manca** perché il modulo invii davvero le email (per ora il modulo resta
+      "muto"). L'utente **ha accesso alla Gmail dell'atelier**
+      (`laboratorio.sastyle@gmail.com`) e la creerà lui; **oggi non si è fatto**.
+      Come si fa, per non dimenticarselo:
+      1. web3forms.com → **Create your Form — Free**;
+      2. email: `laboratorio.sastyle@gmail.com`;
+      3. confermare col **link che arriva nella Gmail** (controllare anche
+         **Spam** e **Promozioni**);
+      4. copiare la **Access Key** (formato `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`);
+      5. incollarla in `index.html` **riga 171** al posto di
+         `INSERISCI_QUI_LA_TUA_ACCESS_KEY`;
+      6. provare un invio di prova e pubblicare.
+      ℹ️ La chiave **non è segreta**: è solo l'alias della email, si può mettere
+      in chiaro nel sito senza rischi. Piano gratis = 250 invii/mese.
 - [x] **Commessa foto per Space Bunny** (12/10/2026): l'utente ha deciso foto
       **panoramiche 16:9** (soggetto intero e centrato, sfondo esteso ai lati).
       Istruzioni pronte in `conoscenza/COMMESSA_FOTO.md` per Space Bunny.

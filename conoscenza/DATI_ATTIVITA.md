@@ -77,14 +77,15 @@ va rifatta su questi servizi (oggi contiene voci generiche).
 | Giorno | Disponibilità |
 | --- | --- |
 | Lunedì – Venerdì | ✅ disponibile |
-| Sabato | ✅ **su richiesta** (disponibilità speciale) |
+| Sabato | ❌ momentaneamente NON mostrato sul sito (la cliente ha chiesto di toglierlo il 12/10/2026) |
 | Domenica | — (da confermare) |
 
 Giorni di chiusura / note: niente orari fissi; ricevimento **solo su
-appuntamento**.
+appuntamento**. La disponibilità del sabato esiste ma **per ora non si
+pubblica**.
 
 **Sul sito** (footer "Come lavoriamo"): "Disponibilità: dal lunedì al
-venerdì · sabato su richiesta".
+venerdì".
 
 ## 4. Social
 

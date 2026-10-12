@@ -292,6 +292,22 @@ veri**: al momento sono testi e foto segnaposto.
       ("prima/dopo/Non ti piace più?", "Qualunque tipo di personalizzazione"):
       vanno bene per i social, meno per un sito.
 
+- [x] **CHIUSURA DELLA GIORNATA — 12/10/2026** (Sottaceto Digitale 🥒): tutto il
+      lavoro di questa chat è **committato e pubblicato**; il ramo è allineato
+      con GitHub (`main...origin/main`, niente da spedire) e il sito online è
+      aggiornato (verificato: compare "Raccontaci il tuo progetto").
+      ⚠️ **Resta NON committato il lavoro in corso di Space Bunny** 🐰:
+      `images/foto-1…5.jpg` modificate + `images/foto-N-sfumatura.jpg` nuove
+      (non tracciate) e la parte di `css/style.css` con `object-fit: cover` e la
+      media query sotto i 1000 px. **Non toccarlo**: lo committerà Space Bunny
+      quando ha finito.
+      💡 **Nota pratica**: `git` **non è nel PATH** di PowerShell, va chiamato per
+      esteso → `& "C:\Program Files\Git\cmd\git.exe" status`.
+      📌 **Da fare al prossimo giro**: creare la chiave Web3Forms e, prima di
+      pubblicizzare il sito, rendere **amichevole** il messaggio del modulo
+      quando la chiave manca (oggi dice "inserisci la tua access key…", che è
+      tecnico e pensato per noi, non per un cliente).
+
 ## Come è stato fatto il logo (per non rifarlo da capo)
 
 1. Dalla foto dell'insegna ho **misurato** la figura e i testi a occhio,
@@ -307,7 +323,22 @@ veri**: al momento sono testi e foto segnaposto.
    ⚠️ Attenzione: i file in `%TEMP%\opencode` **si perdono** se il computer
    viene spento o il sistema pulisce i temporanei. Se serve, rigenerare.
 
-## Domande aperte (in attesa di risposta)
+## Domande aperte (aggiornate al 12/10/2026)
+
+- ⏳ **Chiave Web3Forms** — è l'ultimo pezzo che manca perché il modulo invii
+  davvero le email. Bloccata: serve l'accesso alla Gmail
+  `laboratorio.sastyle@gmail.com` (l'utente la creerà appena possibile; oggi no).
+- ⏳ **Link della pagina Facebook** (footer): lo cerca l'utente di persona; per
+  ora il pulsante porta alla home di Facebook.
+- ⏳ **Partita IVA**: arriva più avanti (segnaposto in fondo pagina).
+- ⏳ **Grigio dei campi del modulo**: ora `var(--sand)` = **#F4F4F4**. Da
+  confermare con l'utente se va bene o se lo vuole più marcato
+  (#EDEDED / #E8E8E8).
+- ⏳ **Palette bianco·nero·grigio·fucsia**: ancora **"in prova"**, da approvare.
+- ⏳ **Foto vere** dei lavori, al posto di quelle generate con l'AI.
+- ⏳ **Messaggio del modulo senza chiave**: da rendere amichevole (vedi sopra).
+
+### Prime domande (ormai risolte, restano qui per memoria)
 
 - Nome dell'attività e slogan?
 - Contatti reali (telefono, email, indirizzo)?

@@ -109,6 +109,11 @@ veri**: al momento sono testi e foto segnaposto.
       ⏳ **Non ancora usato nel sito**: header e footer mostrano ancora la
       scritta semplice "SàStyle Lab" in carattere.
 - [ ] **P.IVA**: arriva più avanti (segnaposto rimasto in fondo pagina).
+- [x] **Commessa foto alla Stilista** (12/10/2026): l'utente ha deciso foto
+      **panoramiche 16:9** (soggetto intero e centrato, sfondo esteso ai lati).
+      Istruzioni pronte in `conoscenza/COMMESSA_FOTO.md` per Space Bunny.
+      ⏳ In attesa: quando le nuove foto sono pronte, **tornare il carosello a
+      `object-fit: cover`** (ora è `contain`) e fare anteprima.
 - [ ] **Foto del carosello: attenzione alle proporzioni** (12 ottobre 2026).
       Le 5 foto hanno forme diverse: foto-1, 2, 3 e 5 sono **verticali**,
       **foto-4 è orizzontale** (1084x820). Nel carosello (che le mostra

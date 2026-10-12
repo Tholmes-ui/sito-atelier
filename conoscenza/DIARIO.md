@@ -57,6 +57,9 @@ veri**: al momento sono testi e foto segnaposto.
 - [ ] **Come funziona (ritiro/consegna)**: aggiungere ai contatti una frase del
       tipo *"Mi porti il capo di persona, su appuntamento, e vieni a riprenderlo
       quando è pronto. Nessun ritiro a domicilio né spedizione."* ✔ dato confermato.
+- [ ] **Logo**: il file originale non esiste (la "y" era una forbice).
+      Recuperarlo dal grafico dell'insegna, oppure **ricostruirlo in SVG**.
+      Vedi `DATI_ATTIVITA.md` § 8.
 
 ## Domande aperte (in attesa di risposta)
 

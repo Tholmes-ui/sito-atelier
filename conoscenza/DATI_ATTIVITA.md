@@ -144,11 +144,31 @@ Giorni di chiusura / note: —
 **Colori stimati:** sfondo **molto scuro** (quasi nero) con scritte chiare.
 Luminosità media 42 su 255 → immagine **scura**.
 
-**Da chiedere alla cliente:**
-- [ ] Esiste il **file del logo "pulito"** (PNG con sfondo trasparente, o SVG/PDF/AI)?
-      Una foto di un biglietto **non** va bene per l'header né per la favicon.
+### Storia del logo
+
+- Nel logo **la lettera "y" era una forbice stilizzata** (in "SàStyle").
+  È l'elemento grafico che rende il marchio riconoscibile → va riprodotto.
+- ⚠️ **Il file originale del logo NON esiste più**: era stato il grafico
+  dell'**insegna** a crearlo, e la signora non lo ha conservato.
+
+### Come recuperare o ricreare il logo (in ordine di preferenza)
+
+1. **Chiedere al fabbro/grafico che ha fatto l'insegna.** Spesso conserva il file
+   vettoriale (`.ai`, `.eps`, `.pdf`, `.svg`) anche a distanza di anni. È la via
+   più rapida e dà il logo **identico** all'originale.
+2. **Fotografare l'insegna** (o il biglietto) **frontalmente**, bene illuminata,
+   riempiendo l'inquadratura. Serve per ricostruire colori, spessori e proporzioni.
+3. **Ricostruirlo noi** in **SVG** (disegno vettoriale): verrà pulito e nitido a
+   ogni dimensione, ma non sarà identico al 100% → solo dopo l'ok della signora.
+
+### Da chiedere alla cliente
+
+- [ ] Contatto del **grafico/fabbro dell'insegna**: può ritrovare il file del logo?
+- [ ] Se il file non esiste: possiamo **fotografare l'insegna** o il biglietto
+      in modo frontale e ben illuminato?
 - [ ] Quali sono i **colori ufficiali** del marchio (es. nero + oro)?
-- [ ] Il logo è **solo la scritta** "SàStyle LAB" o c'è anche un **simbolo/disegno**?
+- [ ] La forbice sostituisce **solo la "y"** o è anche un **simbolo a parte**?
+- [ ] Va bene il sottotitolo **"Pelle · Pellicce · Accessori"**?
 
 ---
 

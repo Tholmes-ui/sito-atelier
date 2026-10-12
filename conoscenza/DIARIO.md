@@ -42,6 +42,14 @@ veri**: al momento sono testi e foto segnaposto.
    `index.html` al posto di `INSERISCI_QUI_LA_TUA_ACCESS_KEY`.
 4. (Opzionale) Collegare un **dominio personalizzato** tipo `ateliernome.it`.
 
+### Modifiche tecniche emerse man mano che arrivano i dati
+
+- [ ] Rifare la casella **"Tipo di lavoro"** del modulo: voci generiche → servizi
+      reali (pelle, pelliccia, montoni, piumini, cappotti, borse e accessori,
+      lavori creativi).
+- [ ] Aggiornare i testi della hero e la descrizione: non "sartoria generica"
+      ma laboratorio specializzato in **pelle e pelliccia**.
+
 ## Domande aperte (in attesa di risposta)
 
 - Nome dell'attività e slogan?

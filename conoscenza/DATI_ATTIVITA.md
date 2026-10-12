@@ -5,7 +5,7 @@
 > **consulta qui**. Se un dato cambia, si aggiorna qui **e** sul sito.
 
 - **Stato raccolta dati:** 🟡 in corso (prime risposte ricevute)
-- **Ultimo aggiornamento:** 12 ottobre 2026 — nome dell'attività
+- **Ultimo aggiornamento:** 12 ottobre 2026 — nome attività, elenco servizi
 
 ---
 
@@ -18,8 +18,18 @@
 | **Titolare** | Sabrina Napolitano | presentazione |
 | Slogan / frase | — *mancante* — | (facoltativo) |
 | Descrizione breve (2–4 righe) | — *mancante* — | hero, sezione contatti |
-| Servizi offerti | — *mancante* — | hero, sezione contatti |
+| Servizi offerti | vedi **Elenco servizi** qui sotto | hero, sezione contatti, modulo |
 | Partita IVA / C.F. | — *mancante* — | fondo pagina |
+
+### Elenco servizi (testo fornito dalla cliente)
+
+> Creazioni, riparazioni e trasformazioni di capi in pelle, pelliccia, montoni,
+> piumini e cappotti.
+> Creazioni e riparazioni di borse e accessori.
+> Lavori creativi.
+
+👉 **Conseguenza sul sito:** la casella **"Tipo di lavoro"** del modulo contatti
+va rifatta su questi servizi (oggi contiene voci generiche). Vedi `DIARIO.md`.
 
 ## 2. Contatti
 

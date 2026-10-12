@@ -77,6 +77,14 @@ veri**: al momento sono testi e foto segnaposto.
 - [ ] **WhatsApp**: si è usato lo stesso numero del telefono
       (`+39 331 357 5006`) — **da confermare** con la cliente.
 - [ ] **Orari**: non disponibili. Per ora il footer dice "su appuntamento".
+- [x] **Foto carosello** (12 ottobre 2026): sostituite con le foto inviate
+      (ripulite dalle scritte in basso con un ritaglio automatico). ⚠️ **Nota:**
+      sono **composizioni generate con Gemini**, NON foto reali dei lavori.
+      Da valutare: sostituirle prima o poi con foto vere (fiducia dei clienti).
+- [x] **Descrizione del logo vero** salvata da un'altra chat in
+      `conoscenza/LOGO_SASTYLE.md` (font Playfair, oro champagne, manichino…).
+      Il file vettoriale `images/logo-sastyle.svg` citato lì **non esiste**: da
+      decidere se ricostruirlo o tenere l'header solo testo.
 - [ ] **P.IVA**: arriva più avanti (segnaposto rimasto in fondo pagina).
 
 ## Domande aperte (in attesa di risposta)

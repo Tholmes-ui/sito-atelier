@@ -56,7 +56,7 @@ va rifatta su questi servizi (oggi contiene voci generiche).
 | Indirizzo da mostrare | **Caselle Torinese (TO)** — solo il comune | contatti, footer |
 | Via e civico | 🚫 **da NON pubblicare** (laboratorio privato) | — |
 | Link Google Maps | 🚫 non serve (nessun negozio aperto al pubblico) | — |
-| Ricevimento clienti | ⏳ da confermare (su appuntamento?) | testi |
+| Ricevimento clienti | ✅ **solo su appuntamento** (confermato) | testi: contatti + footer |
 
 > ⚠️ **Nota importante — indirizzo e luogo di lavoro**
 > Sabrina ha la **Partita IVA** ma **non ha un negozio aperto al pubblico**: lavora
@@ -64,7 +64,7 @@ va rifatta su questi servizi (oggi contiene voci generiche).
 > - si mostra **solo "Caselle Torinese (TO)"**, **mai via e civico**;
 > - **niente mappa** e niente invito a "passare in negozio";
 > - i clienti si contattano per **telefono, WhatsApp, email o modulo**;
-> - se riceve solo **su appuntamento**, lo scriveremo nei testi.
+> - **riceve solo su appuntamento** → va scritto nei testi (contatti e footer).
 >
 > Gli orari vanno quindi presentati come **orari di lavoro / disponibilità al
 > telefono**, non come orari di apertura di un negozio.

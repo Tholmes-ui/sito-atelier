@@ -22,6 +22,10 @@ veri**: al momento sono testi e foto segnaposto.
 3. Creato l'account GitHub (`Tholmes-ui`) e il repository `sito-atelier`.
 4. Primo commit caricato e **GitHub Pages attivato**: sito online e verificato (HTTP 200).
 5. Creato il "cervello condiviso": `AGENTS.md` + questa cartella `conoscenza/`.
+6. **12/10/2026 — PROVA COLORI in corso**: palette cambiata con i colori del
+   biglietto da visita (bianco, nero, grigio, fucsia). Vecchia palette salvata
+   in un commento in cima a `css/style.css` per tornare indietro facilmente.
+   Da valutare insieme all'utente; se approvata resta, altrimenti revert.
 
 ## Decisioni prese
 
@@ -102,6 +106,29 @@ veri**: al momento sono testi e foto segnaposto.
       ⚠️ **Aggiornamento:** il file `images/logo-sastyle.svg` **ora esiste**
       (trovato nella cartella e committato). Da decidere se usarlo nell'header
       al posto della scritta semplice "SàStyle Lab".
+- [x] **FOTO CAROSELLO 16:9** (12 ottobre 2026, **Coniglietto Spaziale** /
+      Space Bunny, su commessa di `COMMESSA_FOTO.md`): tutte e 5 le foto in
+      `images/` sono ora **1600 x 900 px (16:9)**, sovrascritte con lo stesso
+      nome e nello stesso ordine (foto 1 = foto 1, ecc.).
+      - Sfondo: **sfumatura pulita costruita con i colori della foto stessa**
+        (media dei pixel del bordo) + alone luminoso in alto + ombra portata
+        morbida sotto la foto. Stesso stile, stessa luce, stessi colori.
+      - Il **soggetto e' intero e centrato**, con margine di 34 px: nessun
+        capo, nessuna maniglia e nessun bordo e' stato tagliato.
+      - Nessuna scritta, logo, filigrana o bordo aggiunto.
+      - Scartati due metodi peggiori: allungare le fasce laterali della foto
+        (riproduceva pellicce e muri del negozio "strisciati") e sfondo sfocato
+        (lasciava fantasmi sfocati dei capi). Rischio: 6 prove, 2 metodi persi.
+      Da fare ora (Big Pickle): in `css/style.css` riga 236 c'e' ancora
+      `object-fit: contain` sulle foto del carosello. Con `contain` la foto
+      16:9 appare intera, ma il riquadro della hero e' piu' alto, quindi
+      restano fasce scure sopra e sotto. Passando a **`cover`** si elimina la
+      letterbox: `cover` taglia i bordi della foto, che qui e' solo sfondo
+      generato (i capi restano interi).
+      Script usati: `conoscenza\script\16x9.ps1` (converte le foto) e
+      `conoscenza\script\provino.ps1` (compila il provino con tutte e 5 le
+      foto da controllare). Originali recuperabili con `git checkout -- images/`.
+
 - [x] **LOGO RICOSTRUITO** (12 ottobre 2026, questa chat): dalla foto
       dell'insegna è stato rifatto il logo intero in **SVG vettoriale**.
       - `images/logo-sastyle.svg` — versione **oro champagne** (per sfondi scuri)

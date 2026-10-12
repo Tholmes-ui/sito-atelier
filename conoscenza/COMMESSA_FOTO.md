@@ -1,5 +1,10 @@
 # COMMESSA per la STILISTA (Space Bunny) — foto del carosello
 
+> ✅ **FATTAA 12/10/2026** — tutte e 5 le foto in `images/` sono state
+> portate a **1600 × 900 (16:9)** e sovrascritte con lo stesso nome.
+> Dettagli, script usati e la segnalazione per `object-fit` stanno in
+> `conoscenza/DIARIO.md`.
+
 Scritto da: Big Pickle (chat coding), 12/10/2026. Aggiornato il 12/10/2026
 con il feedback del primo tentativo (leggi la sezione "⚠️ Feedback").
 Destinataria: **Space Bunny** (chat immagini).

@@ -112,6 +112,15 @@ veri**: al momento sono testi e foto segnaposto.
 - [ ] **Link pagina Facebook**: ancora mancante — **lo cerca l'utente di persona**
       (aprire la pagina e copiare l'indirizzo dalla barra del browser).
       Temporaneamente porta alla home di Facebook.
+- [x] **Icone social rifatte** (12/10/2026): WhatsApp e TikTok **non erano
+      riconoscibili** (WhatsApp = fumetto vuoto; TikTok = nota musicale
+      generica). Rifatte in **line-art** con i tracciati ufficiali **Tabler**,
+      stesso stile a tratto 24×24 di Instagram/Facebook (stroke 1.7):
+      WhatsApp ora ha la **cornetta dentro il fumetto**, TikTok la **nota "d"**
+      del marchio. Corretta anche la **stessa icona WhatsApp nella sezione
+      contatti** (era identica a quella sbagliata). Instagram e Facebook
+      invariati. Verificato nel browser misurando i `getBBox` (tracciati non
+      vuoti) e con una pagina di anteprima prima/dopo.
 - [x] **Orari**: la cliente non vuole orari specifici (su appuntamento). Ha
       indicato la disponibilità generale **nei giorni lavorativi lun–ven**.
       Il sabato (su richiesta) esiste ma **per ora non si pubblica** (richiesta
@@ -142,9 +151,19 @@ veri**: al momento sono testi e foto segnaposto.
         96x54, che fa la media dei colori) e solo dopo si riporta a 1600x900,
         cosi' spariscono le sagome dei cappotti; (3) velo color crema del sito
         per stemperare il contrasto.
-      ⏳ **Da decidere**: quale versione mettere nel sito. I file sono gia'
-      pronti con entrambi i nomi, quindi si tratta solo di sapere quale serie
-      tenere come `foto-N.jpg`.
+      ✅ **Installata nel sito la versione B** (12/10, su richiesta dell'utente):
+      `foto-1.jpg`...`foto-5.jpg` = sfondo sfocato; la versione A e' conservata
+      come `foto-N-sfumatura.jpg`. Per tornare ad A basta copiare i file
+      `-sfumatura` sopra `foto-N.jpg`.
+      ✅ **CSS sistemato** in `css/style.css`:
+      - `.hero-slide img { object-fit: cover }` (desktop): il 16:9 riempie la
+        hero senza bande nere, tagliando solo il fondo generato;
+      - `@media (max-width: 1000px) { object-fit: contain }`: sotto i 1000 px il
+        ritaglio laterale crescerebbe troppo (13% per lato a 1000 px, 17% a
+        900 px) e toccherebbe i capi di foto-4, che occupa dal 16% al 84% della
+        larghezza. Meglio bande che abiti tagliati.
+      Verificato dal vivo nel browser: 5/5 immagini caricate a 1600x900, desktop
+      = cover senza letterbox, sotto 1000 px = contain.
       Comandi: `16x9.ps1 -TipoSfondo sfumatura|foto -Cartella <orig> -Out <dest>`.
       Attenzione: per rifare le foto servono gli **originali verticali**,
       recuperabili con `git show 9f8e1e7:images/foto-1.jpg > file`, perche' le

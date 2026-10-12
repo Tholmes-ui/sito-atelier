@@ -26,6 +26,12 @@ veri**: al momento sono testi e foto segnaposto.
    biglietto da visita (bianco, nero, grigio, fucsia). Vecchia palette salvata
    in un commento in cima a `css/style.css` per tornare indietro facilmente.
    Da valutare insieme all'utente; se approvata resta, altrimenti revert.
+   - Header con **sfondo grigio scuro** (scala del nero) e testi chiari.
+   - La **y** di "SàStyle" è **fucsia** sia nell'header sia nel footer.
+7. **Effetto "si accende" sulla zona contatti**: cliccando un link che porta a
+   `#contatti` (header/hero/footer) la lista con telefono·email·WhatsApp emette
+   un breve lampo fucsia. Fatto tutto in casa: CSS (`@keyframes contattiLampo`)
+   + poche righe in `js/main.js` (`initContactGlow`). Rispetta "riduci animazioni".
 
 ## Decisioni prese
 

@@ -197,6 +197,44 @@
   }
 
   /* ======================================================================
+     D. EFFETTO "SI ACCENDE" SULLA ZONA CONTATTI
+     Quando si clicca un link che porta a #contatti (header, hero, footer),
+     la zona con telefono/email/WhatsApp emette un breve lampo fucsia, per
+     far capire subito dove sono i recapiti.
+     ====================================================================== */
+  function initContactGlow() {
+    var target = document.querySelector('.contact-facts');
+    if (!target) return;
+
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var timer = null;
+
+    function flash() {
+      if (reduceMotion) return; // rispetta chi ha disattivato le animazioni
+      target.classList.remove('is-lit');
+      void target.offsetWidth; // trucco: "resetta" l'animazione se si clicca più volte
+      target.classList.add('is-lit');
+      if (timer) window.clearTimeout(timer);
+      timer = window.setTimeout(function () {
+        target.classList.remove('is-lit');
+      }, 2000);
+    }
+
+    // Tutti i link che portano alla sezione contatti (header, hero, footer)
+    document.querySelectorAll('a[href="#contatti"]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        // piccolo ritardo: così il lampo parte quando lo scroll fluido è arrivato
+        window.setTimeout(flash, 350);
+      });
+    });
+
+    // Se la pagina si apre già con #contatti nell'indirizzo
+    if (window.location.hash === '#contatti') {
+      window.setTimeout(flash, 500);
+    }
+  }
+
+  /* ======================================================================
      AVVIO
      ====================================================================== */
   document.addEventListener('DOMContentLoaded', function () {
@@ -208,5 +246,6 @@
 
     initReveal();
     initYear();
+    initContactGlow();
   });
 })();

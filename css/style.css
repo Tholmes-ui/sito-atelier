@@ -361,6 +361,32 @@ ul { margin: 0; padding: 0; list-style: none; }
 .contact-facts a { color: var(--ink); }
 .contact-facts a:hover { color: var(--terracotta); }
 
+/* Effetto "si accende": quando si arriva qui dai link "Contatti",
+   la zona con telefono/email/WhatsApp emette un breve lampo fucsia.
+   (Il padding è compensato dal margine negativo, così la lista resta
+   allineata al resto della colonna, ma il lampo ha spazio per respirare.) */
+.contact-facts {
+  padding: 0.8rem 0.9rem;
+  margin: -0.8rem -0.9rem;
+  border-radius: 16px;
+}
+.contact-facts.is-lit { animation: contattiLampo 2s ease; }
+
+@keyframes contattiLampo {
+  0% {
+    background-color: rgba(230, 0, 126, 0.18);
+    box-shadow: 0 0 0 8px rgba(230, 0, 126, 0.14), 0 0 34px 8px rgba(230, 0, 126, 0.38);
+  }
+  55% {
+    background-color: rgba(230, 0, 126, 0.09);
+    box-shadow: 0 0 0 5px rgba(230, 0, 126, 0.09), 0 0 20px 4px rgba(230, 0, 126, 0.22);
+  }
+  100% {
+    background-color: rgba(230, 0, 126, 0);
+    box-shadow: 0 0 0 0 rgba(230, 0, 126, 0), 0 0 0 0 rgba(230, 0, 126, 0);
+  }
+}
+
 .fact-icon {
   flex: 0 0 auto;
   width: 42px;

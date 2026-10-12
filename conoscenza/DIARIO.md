@@ -114,6 +114,13 @@ veri**: al momento sono testi e foto segnaposto.
       Istruzioni pronte in `conoscenza/COMMESSA_FOTO.md` per Space Bunny.
       ⏳ In attesa: quando le nuove foto sono pronte, **tornare il carosello a
       `object-fit: cover`** (ora è `contain`) e fare anteprima.
+- [x] **Foto 16:9 INSTALLATE** (12/10/2026): provato con successo lo script
+      `conoscenza/script/16x9.ps1` (metodo automatico "lato"/"sfocatura").
+      Le versioni 1600×900 hanno sovrascritto `images/foto-1…5.jpg` e il
+      carosello è tornato a **`object-fit: cover`**. Nessuna barra scura.
+      ⚠️ Da verificare con la cliente: sugli schermi ultralarghi il riquadro
+      taglia qualche pixel in alto/basso (solo margine/sfondo, mai il capo se
+      il margine basta). Se lamenta tagli: aumentare `Margine` nello script.
 - [ ] **Foto del carosello: attenzione alle proporzioni** (12 ottobre 2026).
       Le 5 foto hanno forme diverse: foto-1, 2, 3 e 5 sono **verticali**,
       **foto-4 è orizzontale** (1084x820). Nel carosello (che le mostra

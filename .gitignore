@@ -1,0 +1,14 @@
+# File di sistema di Windows / macOS che non vogliamo versionare
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Cartelle temporanee e di strumenti
+node_modules/
+.vscode/
+.idea/
+
+# File di log
+*.log
+npm-debug.log*

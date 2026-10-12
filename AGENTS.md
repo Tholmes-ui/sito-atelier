@@ -49,23 +49,25 @@ turnover): ci sono **argomenti saltati o appena accennati** dai programmi. Quind
 ## 3. Come lavoriamo: tre chat, un solo cervello
 
 Il progetto usa **sessioni OpenCode** che condividono la memoria tramite i file.
-Per consultarle velocemente, ogni chat ha un **nomignolo = nome del modello**
-usato (scelto con l'utente il 12/10/2026, così si risponde subito a "che modelli
-usano?"):
+Per consultarle velocemente, ogni chat ha un **nomignolo simpatico accanto al
+nome del modello** (aggiornato dall'utente il 12/10/2026; niente riferimenti
+alla sartoria). I nomi dei modelli restano la risposta ufficiale a "che
+modelli usi?":
 
-| Nomignolo (modello) | Ruolo | Cosa fa | Dove scrive |
-| --- | --- | --- | --- |
-| **Big Pickle** 🥒 | COSTRUTTRICE (scrittore/coding) | Scrive e modifica il codice del sito | `index.html`, `css/`, `js/`, `images/` |
-| **Space Bunny** 🐰 | REPARTO IMMAGINI (multimediale) | Crea loghi, immagini e proposte grafiche | `images/`, `conoscenza/LOGO_SASTYLE.md` |
-| **LongCat** 🐈 | INSEGNANTE (lezioni/ripasso) | Spiega i concetti, aggiorna il glossario | `conoscenza/GLOSSARIO.md` |
+| Nomignolo simpatico | Modello | Ruolo | Cosa fa | Dove scrive |
+| --- | --- | --- | --- | --- |
+| **Sottaceto Digitale** 🥒 | Big Pickle | scrittore/codice | Scrive e modifica il codice del sito | `index.html`, `css/`, `js/`, `images/` |
+| **Coniglietto Spaziale** 🐰 | Space Bunny | reparto immagini | Crea loghi, immagini e proposte grafiche | `images/`, `conoscenza/COMMESSA_FOTO.md`, `conoscenza/LOGO_SASTYLE.md` |
+| **Prof. Felino** 🐈 | LongCat | insegnante/lezioni | Spiega i concetti, aggiorna il glossario | `conoscenza/GLOSSARIO.md` |
 
 Regole di collaborazione:
 
-1. La chat **INSEGNANTE** (LongCat) scrive ogni concetto nuovo in
+1. La chat **INSEGNANTE** (Prof. Felino / LongCat) scrive ogni concetto nuovo in
    `conoscenza/GLOSSARIO.md`, una voce per termine, con linguaggio semplice e
    un'analogia.
-2. La chat **COSTRUTTRICE** (Big Pickle), prima di prendere decisioni importanti,
-   legge `conoscenza/DIARIO.md` per non contraddire quanto già deciso.
+2. La chat **COSTRUTTRICE** (Sottaceto Digitale / Big Pickle), prima di prendere
+   decisioni importanti, legge `conoscenza/DIARIO.md` per non contraddire quanto
+   già deciso.
 3. Dopo ogni avanzamento o decisione importante, **aggiorna
    `conoscenza/DIARIO.md`** (stato, decisioni, prossimi passi, domande aperte).
 4. Se una delle chat impara qualcosa di utile a un'altra, **lo scrive su file**:

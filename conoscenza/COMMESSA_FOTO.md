@@ -1,7 +1,7 @@
 # COMMESSA per la STILISTA (Space Bunny) — foto del carosello
 
 Scritto da: Big Pickle (chat coding), 12/10/2026.
-Destinataria: **Space Bunny** (chat immagini / Stilista).
+Destinataria: **Space Bunny** (chat immagini).
 Ordine: il cliente (l'utente) ha deciso **formato panoramico 16:9**.
 
 ---
@@ -22,7 +22,7 @@ mantenendo il soggetto intero e centrato.
 2. Per **ognuna** delle 5 foto, produci una versione **16:9** (es. 1600×900 px):
    - **estendi lo sfondo ai lati** in modo naturale (stesso stile, luce e
      colori della foto originale);
-   - il **soggetto (capo sartoriale / scena) deve restare COMPLETO e CENTRATO**;
+   - il **soggetto (il capo / l'oggetto / la scena) deve restare COMPLETO e CENTRATO**;
    - lascia un piccolo margine attorno al soggetto (mai attaccato al bordo);
    - **niente** scritte, loghi, filigrane o bordi aggiunti;
    - se estendendo lo sfondo il soggetto non ci sta (troppo grande), rimpicciolisci

@@ -74,11 +74,11 @@ veri**: al momento sono testi e foto segnaposto.
 - [x] **Favicon nuova** (12/10/2026): **S fucsia (#E6007E) su sfondo nero**,
       font Palatino Linotype corsivo grassetto, resa in `images/favicon.png`
       (il vecchio `favicon.svg` con la S tratteggiata è stato rimosso).
-- [x] **Nomignoli delle chat** (12/10/2026, aggiornati dall'utente):
-      i nomignoli sono **i nomi dei modelli**, così l'utente risponde subito a
-      "che modelli usi?" — **Big Pickle** 🥒 = coding sito (COSTRUTTRICE),
-      **Space Bunny** 🐰 = immagini (REPARTO IMMAGINI), **LongCat** 🐈 =
-      lezioni/ripasso (INSEGNANTE).
+- [x] **Nomignoli simpatici delle chat** (12/10/2026, aggiornati dall'utente —
+      niente riferimenti alla sartoria): **Sottaceto Digitale** 🥒 = Big Pickle,
+      scrittore/codice; **Coniglietto Spaziale** 🐰 = Space Bunny, reparto
+      immagini; **Prof. Felino** 🐈 = LongCat, insegnante/lezioni. I nomi dei
+      modelli restano la risposta ufficiale a "che modelli usi?".
 - [ ] **Link pagina Facebook**: manca l'indirizzo esatto (nel codice c'è un
       commento che lo segnala). Temporaneamente porta alla home di Facebook.
 - [ ] **WhatsApp**: si è usato lo stesso numero del telefono
@@ -109,7 +109,7 @@ veri**: al momento sono testi e foto segnaposto.
       ⏳ **Non ancora usato nel sito**: header e footer mostrano ancora la
       scritta semplice "SàStyle Lab" in carattere.
 - [ ] **P.IVA**: arriva più avanti (segnaposto rimasto in fondo pagina).
-- [x] **Commessa foto alla Stilista** (12/10/2026): l'utente ha deciso foto
+- [x] **Commessa foto per Space Bunny** (12/10/2026): l'utente ha deciso foto
       **panoramiche 16:9** (soggetto intero e centrato, sfondo esteso ai lati).
       Istruzioni pronte in `conoscenza/COMMESSA_FOTO.md` per Space Bunny.
       ⏳ In attesa: quando le nuove foto sono pronte, **tornare il carosello a

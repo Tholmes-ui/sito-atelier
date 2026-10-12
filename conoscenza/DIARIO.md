@@ -44,9 +44,8 @@ veri**: al momento sono testi e foto segnaposto.
 
 ### Modifiche tecniche emerse man mano che arrivano i dati
 
-- [ ] Rifare la casella **"Tipo di lavoro"** del modulo: voci generiche → servizi
-      reali (pelle, pelliccia, montoni, piumini, cappotti, borse e accessori,
-      lavori creativi).
+- [ ] Rifare la casella **"Tipo di lavoro"** del modulo. ✔ voci già decise
+      (vedi `DATI_ATTIVITA.md`), da applicare al codice.
 - [ ] Aggiornare i testi della hero e la descrizione: non "sartoria generica"
       ma laboratorio specializzato in **pelle e pelliccia**.
 

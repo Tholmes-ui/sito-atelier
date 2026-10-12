@@ -29,7 +29,19 @@
 > Lavori creativi.
 
 👉 **Conseguenza sul sito:** la casella **"Tipo di lavoro"** del modulo contatti
-va rifatta su questi servizi (oggi contiene voci generiche). Vedi `DIARIO.md`.
+va rifatta su questi servizi (oggi contiene voci generiche).
+
+### Voci decise per la tendina "Tipo di lavoro" (modulo contatti)
+
+1. Creazione su misura
+2. Riparazione
+3. Trasformazione / restyling
+4. Cappotto, piumino o montone
+5. Capo in pelle
+6. Capo in pelliccia
+7. Borse e accessori
+8. Lavori creativi
+9. Altro
 
 ## 2. Contatti
 

@@ -165,9 +165,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   position: sticky;
   top: 0;
   z-index: 60;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(26, 26, 26, 0.92);  /* grigio scuro, scala del nero (prova colori) */
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .header-inner {
@@ -182,17 +182,17 @@ ul { margin: 0; padding: 0; list-style: none; }
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  color: var(--ink);
+  color: var(--white);
   font-weight: 600;
 }
-.brand:hover { color: var(--ink); }
+.brand:hover { color: var(--white); }
 
 .brand-name {
   font-family: var(--font-head);
   font-size: 1.15rem;
   letter-spacing: 0.01em;
 }
-.brand-name .brand-y { color: var(--muted); }
+.brand-name .brand-y { color: var(--terracotta); }  /* y fucsia ovunque */
 
 .site-nav {
   display: flex;
@@ -200,7 +200,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   gap: 1.6rem;
   font-size: 0.95rem;
 }
-.site-nav a { color: var(--ink); font-weight: 500; }
+.site-nav a { color: rgba(255, 255, 255, 0.88); font-weight: 500; }
 .site-nav a:hover { color: var(--terracotta); }
 .site-nav .btn { color: var(--white); }
 .site-nav .btn:hover { color: var(--white); }

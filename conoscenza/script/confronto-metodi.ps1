@@ -2,11 +2,11 @@
 # contro il metodo NUOVO (sfumatura costruita con i colori della foto).
 # Serve solo a far vedere la differenza: non scrive niente in images/.
 param(
-  [string]$Foto = @("foto-1.jpg", "foto-5.jpg"),
   [string]$Cartella = "images",
   [string]$Out = "C:\Users\tommy\AppData\Local\Temp\opencode\confronto-metodi.png",
   [int]$L = 720, [int]$H = 405
 )
+$Foto = @("foto-1.jpg", "foto-5.jpg")
 Add-Type -AssemblyName System.Drawing
 
 function Sfoca($bmp, $Passi, $Fattore) {

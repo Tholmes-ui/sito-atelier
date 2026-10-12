@@ -5,7 +5,7 @@
 > **consulta qui**. Se un dato cambia, si aggiorna qui **e** sul sito.
 
 - **Stato raccolta dati:** 🟡 in corso (prime risposte ricevute)
-- **Ultimo aggiornamento:** 12 ottobre 2026 — nome, servizi, telefono, email, indirizzo, ritiro/consegna, social
+- **Ultimo aggiornamento:** 12 ottobre 2026 — nome, servizi, telefono, email, indirizzo, ritiro/consegna, social, logo (biglietto)
 
 ---
 
@@ -16,7 +16,7 @@
 | **Nome visualizzato (brand)** | **SàStyle Lab** | header, hero, footer, titolo pagina |
 | **Ragione sociale (registrata)** | SàStyle di Sabrina Napolitano | solo nella riga legale in fondo alla pagina |
 | **Titolare** | Sabrina Napolitano | presentazione |
-| Slogan / frase | — *mancante* — | (facoltativo) |
+| Slogan / frase | candidato: **"Pelle · Pellicce · Accessori"** (dal biglietto; da confermare) | hero, presentazione |
 | Descrizione breve (2–4 righe) | — *mancante* — | hero, sezione contatti |
 | Servizi offerti | vedi **Elenco servizi** qui sotto | hero, sezione contatti, modulo |
 | Partita IVA / C.F. | ⏳ da fornire in seguito (dalla cliente) | fondo pagina |
@@ -128,6 +128,27 @@ Giorni di chiusura / note: —
 - Mostrare P.IVA sul sito: ☐ sì ☐ no
 - Foto con persone riconoscibili: ☐ no ☐ sì (serve consenso)
 - Nota privacy accanto al modulo: ☐ da scrivere
+
+## 8. Logo e immagine coordinata
+
+**File ricevuto:** `images/WhatsApp Image 2026-10-12 at 17.02.40.jpeg`
+(è una **foto/screenshot di un biglietto da visita**, 768 × 1376 pixel, sfondo scuro)
+
+**Testo letto sul biglietto** (con OCR, quindi con qualche incertezza):
+- `PELLE - PELLICCE - ACCESSORI`
+- `SÀSTYLE LAB`
+- `SOLO SU APPUNTAMENTO`
+- `3313575006`
+- `SàStyle` · `@sastylelab`
+
+**Colori stimati:** sfondo **molto scuro** (quasi nero) con scritte chiare.
+Luminosità media 42 su 255 → immagine **scura**.
+
+**Da chiedere alla cliente:**
+- [ ] Esiste il **file del logo "pulito"** (PNG con sfondo trasparente, o SVG/PDF/AI)?
+      Una foto di un biglietto **non** va bene per l'header né per la favicon.
+- [ ] Quali sono i **colori ufficiali** del marchio (es. nero + oro)?
+- [ ] Il logo è **solo la scritta** "SàStyle LAB" o c'è anche un **simbolo/disegno**?
 
 ---
 

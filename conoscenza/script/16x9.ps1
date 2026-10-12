@@ -88,10 +88,10 @@ foreach ($f in $file) {
   $fy = [int](($Altezza  - $fh) / 2)
   $gapW = $fx
 
-  # ---------- scegli il metodo ----------
+  # ---------- metodo ----------
   $nL = FondoLiscio $src $true
   $nR = FondoLiscio $src $false
-  $metodo = if (($nL -lt 9) -and ($nR -lt 9)) { "lato" } else { "sfocatura" }
+  $metodo = "sfondo morbido"
 
   # ---------- tela ----------
   $tela = New-Object System.Drawing.Bitmap $Larghezza, $Altezza

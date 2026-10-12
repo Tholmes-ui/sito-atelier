@@ -122,6 +122,12 @@ veri**: al momento sono testi e foto segnaposto.
       tagli, ma barre scure ai lati su desktop). Lo script resta salvato per
       eventuali tentativi futuri; possibile alternativa: allargamento disegnato
       da Space Bunny (commessa in `conoscenza/COMMESSA_FOTO.md`).
+- [x] **NUOVO TENTATIVO in corso** (12/10/2026): Space Bunny sta rifacendo le
+      foto con **outpainting vero** (estensione disegnata, non sfocata).
+      Feedback del primo tentativo aggiunto alla commessa. Quando consegna:
+      1. sostituire `images/foto-1…5.jpg` con le nuove 16:9;
+      2. rimettere `object-fit: cover` nel CSS;
+      3. anteprima e push.
 - [ ] **Foto del carosello: attenzione alle proporzioni** (12 ottobre 2026).
       Le 5 foto hanno forme diverse: foto-1, 2, 3 e 5 sono **verticali**,
       **foto-4 è orizzontale** (1084x820). Nel carosello (che le mostra

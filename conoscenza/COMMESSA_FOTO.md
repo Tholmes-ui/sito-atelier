@@ -1,10 +1,25 @@
 # COMMESSA per la STILISTA (Space Bunny) — foto del carosello
 
-Scritto da: Big Pickle (chat coding), 12/10/2026.
+Scritto da: Big Pickle (chat coding), 12/10/2026. Aggiornato il 12/10/2026
+con il feedback del primo tentativo (leggi la sezione "⚠️ Feedback").
 Destinataria: **Space Bunny** (chat immagini).
 Ordine: il cliente (l'utente) ha deciso **formato panoramico 16:9**.
 
 ---
+
+## ⚠️ Feedback del primo tentativo (IMPORTANTE)
+
+Un tentativo automatico (sfondo allargato per ripetizione/stretching + versione
+con **sfocatura**) è stato provato ed è **stato rifiutato dall'utente**:
+"brutte da vedere". NIENTE di simile stavolta:
+
+- ❌ **niente** sfondi sfocati, né "strisce allungate" ripetute o specchiate;
+- ❌ **niente** bordi visibili della foto dentro l'immagine (la foto originale
+  non deve "galleggiare" su uno sfondo diverso);
+- ✅ il risultato deve sembrare **una foto vera scattata già larga**: stessa
+  luce, stessi colori, stessa atmosfera su tutta l'immagine;
+- ✅ se un lato va esteso, **disegnalo davvero** (outpainting reale: pavimento,
+  parete, tenda, sfondo coerente con la scena) — non copiare una striscia.
 
 ## Il problema
 

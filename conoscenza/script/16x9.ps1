@@ -69,6 +69,22 @@ function FondoLiscio($img, $daSinistra) {
   return ($somma / $n)
 }
 
+# --- il colore del fondo: media dei pixel del bordo esterno ------------------
+function ColoreBordo($img, $Pct) {
+  $t = [Math]::Max(2, [int]([Math]::Min($img.Width, $img.Height) * $Pct))
+  $passo = [Math]::Max(1, [int]($img.Height / 80))
+  $sr = 0; $sg = 0; $sb = 0; $n = 0
+  for ($y = 0; $y -lt $img.Height; $y += $passo) {
+    for ($x = 0; $x -lt $img.Width; $x += $passo) {
+      if (($x -lt $t) -or ($x -ge ($img.Width - $t)) -or ($y -lt $t) -or ($y -ge ($img.Height - $t))) {
+        $c = $img.GetPixel($x, $y); $sr += $c.R; $sg += $c.G; $sb += $c.B; $n++
+      }
+    }
+  }
+  if ($n -eq 0) { return @(128, 128, 128) }
+  return @([int]($sr / $n), [int]($sg / $n), [int]($sb / $n))
+}
+
 # --- salvataggio JPEG di qualita' alta --------------------------------------
 $cod = [System.Drawing.Imaging.ImageCodecInfo]::GetImageEncoders() | Where-Object { $_.MimeType -eq 'image/jpeg' }
 $par = New-Object System.Drawing.Imaging.EncoderParameters 1
@@ -76,6 +92,7 @@ $par.Param[0] = New-Object System.Drawing.Imaging.EncoderParameter ([System.Draw
 
 $file = Get-ChildItem $Cartella -Filter "$Prefisso*$Suffisso" | Sort-Object Name
 foreach ($f in $file) {
+  "LEGGO: {0}" -f $f.FullName
   $src = [System.Drawing.Image]::FromFile($f.FullName)
   $sw = $src.Width; $sh = $src.Height
 
@@ -97,26 +114,26 @@ foreach ($f in $file) {
   $tela = New-Object System.Drawing.Bitmap $Larghezza, $Altezza
   $tela.SetResolution(96, 96)
 
-  # ---- sfondo: la foto riempie tutto, sfocata finche' diventa un campo
-  #      di colore morbido. Cosi' i colori e la luce sono esattamente quelli
-  #      della foto, ma non si vede piu' nessun dettaglio che disturba.
-  $s1 = [Math]::Max($Larghezza / $sw, $Altezza / $sh)
-  $cw = [int][Math]::Ceiling($sw * $s1); $ch = [int][Math]::Ceiling($sh * $s1)
-  $sf = New-Object System.Drawing.Bitmap $Larghezza, $Altezza
-  $g = [System.Drawing.Graphics]::FromImage($sf)
-  $g.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
-  $g.PixelOffsetMode   = [System.Drawing.Drawing2D.PixelOffsetMode]::HighQuality
-  $g.DrawImage($src, [int](($Larghezza - $cw) / 2), [int](($Altezza - $ch) / 2), $cw, $ch)
-  $g.Dispose()
-  $sf = Sfoca $sf 3 38
-  $sf.SetResolution(96, 96)
-  $g = [System.Drawing.Graphics]::FromImage($sf)
-  $velo = New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(70, 24, 22, 21))
-  $g.FillRectangle($velo, 0, 0, $Larghezza, $Altezza)
-  $g.Dispose(); $velo.Dispose()
+  # ---- sfondo: una sfumatura pulita costruita con i colori della foto ------
+  # (niente "fantasmi" di capi sfocati: solo il colore e la luce della foto)
+  $bc = ColoreBordo $src 0.09
+  $chiaro = [System.Drawing.Color]::FromArgb(255, [Math]::Min(255, [int]($bc[0] * 1.16) + 8), [Math]::Min(255, [int]($bc[1] * 1.16) + 8), [Math]::Min(255, [int]($bc[2] * 1.16) + 8))
+  $scuro  = [System.Drawing.Color]::FromArgb(255, [int]($bc[0] * 0.72), [int]($bc[1] * 0.72), [int]($bc[2] * 0.72))
   $g = [System.Drawing.Graphics]::FromImage($tela)
-  $g.DrawImage($sf, 0, 0); $g.Dispose()
-  $sf.Dispose()
+  $rect = New-Object System.Drawing.Rectangle 0, 0, $Larghezza, $Altezza
+  $sfum = New-Object System.Drawing.Drawing2D.LinearGradientBrush $rect, $chiaro, $scuro, 90
+  $g.FillRectangle($sfum, $rect)
+  # alone luminoso in alto al centro, come un fondo studio
+  $rAlone = [System.Drawing.Rectangle]::new(
+      [int]($Larghezza * 0.12), [int](-$Altezza * 0.35),
+      [int]($Larghezza * 0.76), [int]($Altezza * 1.1))
+  $sfum2 = [System.Drawing.Drawing2D.LinearGradientBrush]::new(
+      $rAlone,
+      [System.Drawing.Color]::FromArgb(58, 255, 255, 255),
+      [System.Drawing.Color]::FromArgb(0, 255, 255, 255),
+      [System.Drawing.Drawing2D.LinearGradientMode]::Vertical)
+  $g.FillRectangle($sfum2, $rAlone)
+  $g.Dispose(); $sfum.Dispose(); $sfum2.Dispose()
 
   # ---- ombra portata morbida sotto la foto: la stacca dal fondo ----
   $layer = New-Object System.Drawing.Bitmap $Larghezza, $Altezza

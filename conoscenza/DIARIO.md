@@ -41,6 +41,9 @@ veri**: al momento sono testi e foto segnaposto.
   (768x1376): si legge tutto il testo dell'insegna. Prima valeva solo per gli
   altri modelli gratuiti (longcat, mimo, step-5, ling, exo, nemotron, muse-spark),
   che invece non le accettavano.
+  💡 **Regola pratica**: la chat e la memoria sono le stesse, cambia solo il
+  "cervello". Se si torna su **Big Pickle** le immagini tornano invisibili →
+  **per lavorare sulle foto restare su Space Bunny**.
 - ✅ **Cosa so fare sulle immagini** (verificato):
   - vederle e leggerne il testo;
   - ritagliare, ridimensionare, comprimere, cambiare formato

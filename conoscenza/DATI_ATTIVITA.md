@@ -5,7 +5,7 @@
 > **consulta qui**. Se un dato cambia, si aggiorna qui **e** sul sito.
 
 - **Stato raccolta dati:** 🟡 in corso (prime risposte ricevute)
-- **Ultimo aggiornamento:** 12 ottobre 2026 — nome, servizi, telefono, email, indirizzo, ritiro/consegna, social, logo (biglietto)
+- **Ultimo aggiornamento:** 12 ottobre 2026 — dati applicati al sito; logo deciso (solo testo)
 
 ---
 
@@ -146,8 +146,10 @@ Luminosità media 42 su 255 → immagine **scura**.
 
 ### Storia del logo
 
-- Nel logo **la lettera "y" era una forbice stilizzata** (in "SàStyle").
-  È l'elemento grafico che rende il marchio riconoscibile → va riprodotto.
+- Nel vecchio logo **la lettera "y" era una forbice stilizzata**.
+- ✅ **Decisione presa (12 ottobre 2026): si scartano forbice e simboli.**
+  Il marchio è **solo la parola "SàStyle Lab"**, scritta in carattere elegante.
+  Motivo: l'attività non usa più quel simbolo e così non ci sono problemi.
 - ⚠️ **Il file originale del logo NON esiste più**: era stato il grafico
   dell'**insegna** a crearlo, e la signora non lo ha conservato.
 

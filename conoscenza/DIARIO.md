@@ -35,10 +35,20 @@ veri**: al momento sono testi e foto segnaposto.
 
 ## Cosa ho imparato (appunti utili)
 
-- 🔍 **Le immagini non si vedono**: i modelli gratuiti disponibili qui
-  (longcat = "Big Pickle", mimo, step-5, ling, exo, space-bunny, nemotron,
-  muse-spark) **non accettano immagini in ingresso**. Cambiare modello **non**
-  serve per "vedere" le foto.
+- ✅ **AGGIORNAMENTO 12/10/2026 — ORA LE FOTO SI VEDONO**: il modello
+  **space-bunny-free** (quello attuale) **accetta immagini in ingresso** e le
+  mostra davvero. Verificato leggendo `images/WhatsApp Image 2026-10-12 at 17.02.40.jpeg`
+  (768x1376): si legge tutto il testo dell'insegna. Prima valeva solo per gli
+  altri modelli gratuiti (longcat, mimo, step-5, ling, exo, nemotron, muse-spark),
+  che invece non le accettavano.
+- ✅ **Cosa so fare sulle immagini** (verificato):
+  - vederle e leggerne il testo;
+  - ritagliare, ridimensionare, comprimere, cambiare formato
+    (JPEG/PNG) con PowerShell + `System.Drawing`;
+  - creare disegni e loghi in **SVG** (scrivendo il codice, non con un'AI);
+  - fare screenshot del sito.
+  **Cosa NON so fare**: generare foto realistiche con l'AI (nessun modello
+  di generazione immagini disponibile).
 - ✅ **Trucco usato al posto della vista**: uno script PowerShell con l'**OCR**
   di Windows legge il **testo** dentro le immagini, e un altro script con
   `System.Drawing` ne campiona i **colori** e la luminosità.
@@ -47,31 +57,24 @@ veri**: al momento sono testi e foto segnaposto.
 
 ## Prossimi passi (da fare)
 
-1. **Sostituire i 14 segnaposto gialli** con i dati reali della signora:
-   nome attività, telefono, email, indirizzo, orari, P.IVA, link social.
-2. **Sostituire le 5 foto** `images/foto-1.svg` … `foto-5.svg` con le foto vere dei lavori.
-3. **Creare la chiave Web3Forms** (https://web3forms.com) e incollarla in
+1. **Sostituire le 5 foto** `images/foto-1.svg` … `foto-5.svg` con le foto vere dei lavori.
+2. **Creare la chiave Web3Forms** (https://web3forms.com) e incollarla in
    `index.html` al posto di `INSERISCI_QUI_LA_TUA_ACCESS_KEY`.
-4. (Opzionale) Collegare un **dominio personalizzato** tipo `ateliernome.it`.
+3. (Opzionale) Collegare un **dominio personalizzato** tipo `sastylelab.it`.
 
 ### Modifiche tecniche emerse man mano che arrivano i dati
 
-- [ ] Rifare la casella **"Tipo di lavoro"** del modulo. ✔ voci già decise
-      (vedi `DATI_ATTIVITA.md`), da applicare al codice.
-- [ ] Aggiornare i testi della hero e la descrizione: non "sartoria generica"
-      ma laboratorio specializzato in **pelle e pelliccia**.
-- [ ] **Indirizzo privato**: nel footer la sezione "Dove trovarmi" deve perdere
-      via e civico → resta solo **"Caselle Torinese (TO)"**, con nota
-      **"Laboratorio privato — ricevimento su appuntamento"** (✔ confermato).
-      Niente mappa.
-- [ ] **Orari**: presentarli come *disponibilità*, non come orari di negozio
-      (non c'è un negozio aperto al pubblico).
-- [ ] **Come funziona (ritiro/consegna)**: aggiungere ai contatti una frase del
-      tipo *"Mi porti il capo di persona, su appuntamento, e vieni a riprenderlo
-      quando è pronto. Nessun ritiro a domicilio né spedizione."* ✔ dato confermato.
-- [ ] **Logo**: il file originale non esiste (la "y" era una forbice).
-      Recuperarlo dal grafico dell'insegna, oppure **ricostruirlo in SVG**.
-      Vedi `DATI_ATTIVITA.md` § 8.
+- [x] **Dati reali applicati al sito** (12 ottobre 2026): nome "SàStyle Lab",
+      ragione sociale nel footer, slogan "Pelle · Pellicce · Accessori", servizi,
+      telefono, email, "Caselle Torinese (TO)", "solo su appuntamento", social
+      Instagram + TikTok, tendina "Tipo di lavoro" rifatta.
+- [x] Logo: **solo la parola**, niente forbice (decisione dell'utente).
+- [ ] **Link pagina Facebook**: manca l'indirizzo esatto (nel codice c'è un
+      commento che lo segnala). Temporaneamente porta alla home di Facebook.
+- [ ] **WhatsApp**: si è usato lo stesso numero del telefono
+      (`+39 331 357 5006`) — **da confermare** con la cliente.
+- [ ] **Orari**: non disponibili. Per ora il footer dice "su appuntamento".
+- [ ] **P.IVA**: arriva più avanti (segnaposto rimasto in fondo pagina).
 
 ## Domande aperte (in attesa di risposta)
 

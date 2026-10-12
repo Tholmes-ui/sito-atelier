@@ -387,6 +387,27 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
 }
 
+/* Stesso effetto, ma sul MODULO: cliccando "Richiedi preventivo" (header, hero
+   o footer) si illumina il riquadro da compilare. L'alone è disegnato da un
+   elemento "fantasma" (::after) così non tocco l'ombra del modulo. */
+.contact-form { position: relative; }
+.contact-form::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;   /* non blocca i click sui campi del modulo */
+  opacity: 0;
+  box-shadow: 0 0 0 6px rgba(230, 0, 126, 0.38), 0 0 46px 12px rgba(230, 0, 126, 0.45);
+}
+.contact-form.is-lit::after { animation: contattiLampoForm 2s ease; }
+
+@keyframes contattiLampoForm {
+  0%   { opacity: 1; }
+  55%  { opacity: 0.55; }
+  100% { opacity: 0; }
+}
+
 .fact-icon {
   flex: 0 0 auto;
   width: 42px;

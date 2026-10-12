@@ -197,40 +197,48 @@
   }
 
   /* ======================================================================
-     D. EFFETTO "SI ACCENDE" SULLA ZONA CONTATTI
-     Quando si clicca un link che porta a #contatti (header, hero, footer),
-     la zona con telefono/email/WhatsApp emette un breve lampo fucsia, per
-     far capire subito dove sono i recapiti.
+     D. EFFETTO "SI ACCENDE" SUI CONTATTI
+     Quando si clicca un link che porta a #contatti:
+       - "Contatti"                  -> si illumina la zona dei recapiti;
+       - "Richiedi (un) preventivo"  -> si illumina il modulo da compilare.
+     Così l'occhio cade subito sul punto giusto.
      ====================================================================== */
   function initContactGlow() {
-    var target = document.querySelector('.contact-facts');
-    if (!target) return;
+    var facts = document.querySelector('.contact-facts');
+    var form = document.getElementById('contact-form');
+    if (!facts && !form) return;
 
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var timer = null;
+    var timers = new WeakMap();
 
-    function flash() {
-      if (reduceMotion) return; // rispetta chi ha disattivato le animazioni
-      target.classList.remove('is-lit');
-      void target.offsetWidth; // trucco: "resetta" l'animazione se si clicca più volte
-      target.classList.add('is-lit');
-      if (timer) window.clearTimeout(timer);
-      timer = window.setTimeout(function () {
-        target.classList.remove('is-lit');
-      }, 2000);
+    // Fa "accendere" un elemento: gli mette la classe is-lit per 2 secondi.
+    function flash(el) {
+      if (!el || reduceMotion) return; // rispetta chi ha disattivato le animazioni
+      el.classList.remove('is-lit');
+      void el.offsetWidth; // trucco: "resetta" l'animazione se si clicca più volte
+      el.classList.add('is-lit');
+      var previous = timers.get(el);
+      if (previous) window.clearTimeout(previous);
+      timers.set(el, window.setTimeout(function () {
+        el.classList.remove('is-lit');
+      }, 2000));
     }
 
-    // Tutti i link che portano alla sezione contatti (header, hero, footer)
+    // Tutti i link che portano alla sezione contatti (header, hero, footer).
+    // Decido COSA illuminare in base al testo del link.
     document.querySelectorAll('a[href="#contatti"]').forEach(function (link) {
+      var illuminaModulo = /preventivo/i.test(link.textContent || '');
       link.addEventListener('click', function () {
         // piccolo ritardo: così il lampo parte quando lo scroll fluido è arrivato
-        window.setTimeout(flash, 350);
+        window.setTimeout(function () {
+          flash(illuminaModulo ? form : facts);
+        }, 350);
       });
     });
 
     // Se la pagina si apre già con #contatti nell'indirizzo
     if (window.location.hash === '#contatti') {
-      window.setTimeout(flash, 500);
+      window.setTimeout(function () { flash(facts); }, 500);
     }
   }
 

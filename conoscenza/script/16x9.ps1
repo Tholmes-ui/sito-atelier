@@ -19,6 +19,9 @@ param(
   [string]$Cartella = "images",
   [string]$Prefisso = "foto-",
   [string]$Suffisso = ".jpg",
+  [string]$SuffissoOut = "",
+  [ValidateSet("sfumatura", "foto")]
+  [string]$TipoSfondo = "sfumatura",
   [int]$Larghezza = 1600,
   [int]$Altezza   = 900,
   [int]$Margine   = 34,
@@ -114,25 +117,52 @@ foreach ($f in $file) {
   $tela = New-Object System.Drawing.Bitmap $Larghezza, $Altezza
   $tela.SetResolution(96, 96)
 
-  # ---- sfondo: una sfumatura pulita costruita con i colori della foto ------
-  # (niente "fantasmi" di capi sfocati: solo il colore e la luce della foto)
-  $bc = ColoreBordo $src 0.09
-  $chiaro = [System.Drawing.Color]::FromArgb(255, [Math]::Min(255, [int]($bc[0] * 1.16) + 8), [Math]::Min(255, [int]($bc[1] * 1.16) + 8), [Math]::Min(255, [int]($bc[2] * 1.16) + 8))
-  $scuro  = [System.Drawing.Color]::FromArgb(255, [int]($bc[0] * 0.72), [int]($bc[1] * 0.72), [int]($bc[2] * 0.72))
-  $g = [System.Drawing.Graphics]::FromImage($tela)
-  $rect = New-Object System.Drawing.Rectangle 0, 0, $Larghezza, $Altezza
-  $sfum = New-Object System.Drawing.Drawing2D.LinearGradientBrush $rect, $chiaro, $scuro, 90
-  $g.FillRectangle($sfum, $rect)
-  # alone luminoso dall'alto, come un fondo studio (copre tutta la larghezza,
-  # altrimenti resta una banda piu' scura ai lati)
-  $rAlone = [System.Drawing.Rectangle]::new(0, [int](-$Altezza * 0.30), $Larghezza, [int]($Altezza * 1.05))
-  $sfum2 = [System.Drawing.Drawing2D.LinearGradientBrush]::new(
-      $rAlone,
-      [System.Drawing.Color]::FromArgb(58, 255, 255, 255),
-      [System.Drawing.Color]::FromArgb(0, 255, 255, 255),
-      [System.Drawing.Drawing2D.LinearGradientMode]::Vertical)
-  $g.FillRectangle($sfum2, $rAlone)
-  $g.Dispose(); $sfum.Dispose(); $sfum2.Dispose()
+  if ($TipoSfondo -eq "sfumatura") {
+    # ---- sfondo A: sfumatura pulita costruita con i colori della foto -----
+    # niente "fantasmi" di capi sfocati: solo il colore e la luce della foto
+    $bc = ColoreBordo $src 0.09
+    $chiaro = [System.Drawing.Color]::FromArgb(255, [Math]::Min(255, [int]($bc[0] * 1.16) + 8), [Math]::Min(255, [int]($bc[1] * 1.16) + 8), [Math]::Min(255, [int]($bc[2] * 1.16) + 8))
+    $scuro  = [System.Drawing.Color]::FromArgb(255, [int]($bc[0] * 0.72), [int]($bc[1] * 0.72), [int]($bc[2] * 0.72))
+    $g = [System.Drawing.Graphics]::FromImage($tela)
+    $rect = New-Object System.Drawing.Rectangle 0, 0, $Larghezza, $Altezza
+    $sfum = New-Object System.Drawing.Drawing2D.LinearGradientBrush $rect, $chiaro, $scuro, 90
+    $g.FillRectangle($sfum, $rect)
+    # alone luminoso dall'alto, come un fondo studio (copre tutta la larghezza,
+    # altrimenti resta una banda piu' scura ai lati)
+    $rAlone = [System.Drawing.Rectangle]::new(0, [int](-$Altezza * 0.30), $Larghezza, [int]($Altezza * 1.05))
+    $sfum2 = [System.Drawing.Drawing2D.LinearGradientBrush]::new(
+        $rAlone,
+        [System.Drawing.Color]::FromArgb(58, 255, 255, 255),
+        [System.Drawing.Color]::FromArgb(0, 255, 255, 255),
+        [System.Drawing.Drawing2D.LinearGradientMode]::Vertical)
+    $g.FillRectangle($sfum2, $rAlone)
+    $g.Dispose(); $sfum.Dispose(); $sfum2.Dispose()
+  } else {
+    # ---- sfondo B: la stessa foto, sfocata, come fondo --------------------
+    # ATTENZIONE A NON DISTORCERE: non si stira mai. Si ritaglia il pezzo
+    # centrale con le proporzioni giuste usando il rettangolo sorgente, quindi
+    # la foto resta identica, solo piu' grande e sfocata.
+    $s1 = [Math]::Max($Larghezza / $sw, $Altezza / $sh)
+    $sxw = [Math]::Min($sw, $Larghezza / $s1)
+    $sxh = [Math]::Min($sh, $Altezza  / $s1)
+    $sxx = ($sw - $sxw) / 2
+    $sxy = ($sh - $sxh) / 2
+    $sf = New-Object System.Drawing.Bitmap $Larghezza, $Altezza
+    $sf.SetResolution(96, 96)
+    $g = [System.Drawing.Graphics]::FromImage($sf)
+    $g.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+    $g.PixelOffsetMode   = [System.Drawing.Drawing2D.PixelOffsetMode]::HighQuality
+    $g.DrawImage($src,
+      [System.Drawing.Rectangle]::new(0, 0, $Larghezza, $Altezza),
+      [System.Drawing.Rectangle]::new([int]$sxx, [int]$sxy, [int]$sxw, [int]$sxh),
+      [System.Drawing.GraphicsUnit]::Pixel)
+    $g.Dispose()
+    $sf = Sfoca $sf 3 30
+    $sf.SetResolution(96, 96)
+    $g = [System.Drawing.Graphics]::FromImage($tela)
+    $g.DrawImage($sf, 0, 0)
+    $g.Dispose(); $sf.Dispose()
+  }
 
   # ---- ombra portata morbida sotto la foto: la stacca dal fondo ----
   $layer = New-Object System.Drawing.Bitmap $Larghezza, $Altezza
@@ -153,11 +183,11 @@ foreach ($f in $file) {
   $g.DrawImage($src, $fx, $fy, $fw, $fh)
   $g.Dispose()
 
-  $dest = Join-Path $Out $f.Name
+  $dest = Join-Path $Out ($f.BaseName + $SuffissoOut + $f.Extension)
   $tela.Save($dest, $cod, $par)
 
-  "{0,-12} {1,5}x{2,-5} salti fondo L={3,5:N1} R={4,5:N1} -> metodo: {5,-10} soggetto {6}x{7} in ({8},{9})  {10:N0} byte" -f `
-    $f.Name, $sw, $sh, $nL, $nR, $metodo, $fw, $fh, $fx, $fy, (Get-Item $dest).Length
+  "{0,-22} sorgente {1,5}x{2,-5} sfondo: {3,-10} soggetto {4}x{5} in ({6},{7})  {8:N0} byte" -f `
+    (Split-Path $dest -Leaf), $sw, $sh, $TipoSfondo, $fw, $fh, $fx, $fy, (Get-Item $dest).Length
 
   $src.Dispose(); $tela.Dispose()
 }

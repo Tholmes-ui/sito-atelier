@@ -28,10 +28,14 @@ veri**: al momento sono testi e foto segnaposto.
    Da valutare insieme all'utente; se approvata resta, altrimenti revert.
    - Header con **sfondo grigio scuro** (scala del nero) e testi chiari.
    - La **y** di "SàStyle" è **fucsia** sia nell'header sia nel footer.
-7. **Effetto "si accende" sulla zona contatti**: cliccando un link che porta a
-   `#contatti` (header/hero/footer) la lista con telefono·email·WhatsApp emette
-   un breve lampo fucsia. Fatto tutto in casa: CSS (`@keyframes contattiLampo`)
-   + poche righe in `js/main.js` (`initContactGlow`). Rispetta "riduci animazioni".
+7. **Effetto "si accende" sui contatti** (`js/main.js` → `initContactGlow` +
+   CSS). Cliccando un link che porta a `#contatti` scatta un breve lampo fucsia:
+   - link **"Contatti"** → si illumina la zona **recapiti** (telefono·email·WhatsApp);
+   - link **"Richiedi (un) preventivo"** → si illumina il **modulo** da compilare.
+   Il CSS distingue i due effetti: `@keyframes contattiLampo` (recapiti) e
+   `@keyframes contattiLampoForm` (modulo, tramite pseudo-elemento `::after` che
+   non disturba l'ombra del modulo). Rispetta "riduci animazioni". Verificato dal
+   browser con test vero (nessun errore in console).
 
 ## Decisioni prese
 

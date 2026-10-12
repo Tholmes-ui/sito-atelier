@@ -71,7 +71,9 @@ veri**: al momento sono testi e foto segnaposto.
       ragione sociale nel footer, slogan "Pelle · Pellicce · Accessori", servizi,
       telefono, email, "Caselle Torinese (TO)", "solo su appuntamento", social
       Instagram + TikTok, tendina "Tipo di lavoro" rifatta.
-- [x] Logo: **solo la parola**, niente forbice (decisione dell'utente).
+- [x] **Favicon nuova** (12/10/2026): **S fucsia (#E6007E) su sfondo nero**,
+      font Palatino Linotype corsivo grassetto, resa in `images/favicon.png`
+      (il vecchio `favicon.svg` con la S tratteggiata è stato rimosso).
 - [x] **Nomignoli delle chat** (12/10/2026, aggiornati dall'utente):
       i nomignoli sono **i nomi dei modelli**, così l'utente risponde subito a
       "che modelli usi?" — **Big Pickle** 🥒 = coding sito (COSTRUTTRICE),

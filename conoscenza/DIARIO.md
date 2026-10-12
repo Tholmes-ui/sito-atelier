@@ -81,10 +81,14 @@ veri**: al momento sono testi e foto segnaposto.
       (ripulite dalle scritte in basso con un ritaglio automatico). ⚠️ **Nota:**
       sono **composizioni generate con Gemini**, NON foto reali dei lavori.
       Da valutare: sostituirle prima o poi con foto vere (fiducia dei clienti).
+- [x] **Carosello: foto mostrate INTERE** (12 ottobre 2026): la cliente non
+      voleva foto tagliate → `object-fit: contain` (foto intera, centrata sul
+      fondo scuro) e via l'animazione di zoom che tagliava i bordi.
 - [x] **Descrizione del logo vero** salvata da un'altra chat in
       `conoscenza/LOGO_SASTYLE.md` (font Playfair, oro champagne, manichino…).
-      Il file vettoriale `images/logo-sastyle.svg` citato lì **non esiste**: da
-      decidere se ricostruirlo o tenere l'header solo testo.
+      ⚠️ **Aggiornamento:** il file `images/logo-sastyle.svg` **ora esiste**
+      (trovato nella cartella e committato). Da decidere se usarlo nell'header
+      al posto della scritta semplice "SàStyle Lab".
 - [ ] **P.IVA**: arriva più avanti (segnaposto rimasto in fondo pagina).
 
 ## Domande aperte (in attesa di risposta)

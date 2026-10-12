@@ -48,22 +48,26 @@ turnover): ci sono **argomenti saltati o appena accennati** dai programmi. Quind
 
 ## 3. Come lavoriamo: due chat, un solo cervello
 
-Il progetto usa **due sessioni OpenCode** che condividono la memoria tramite i file:
+Il progetto usa **sessioni OpenCode** che condividono la memoria tramite i file.
+Per consultarle velocemente, ogni chat ha un **nomignolo** (a tema sartoria),
+scelto con l'utente il 12/10/2026:
 
-| Ruolo | Cosa fa | Dove scrive |
-| --- | --- | --- |
-| **COSTRUTTRICE** | Scrive e modifica il codice del sito | `index.html`, `css/`, `js/`, `images/` |
-| **INSEGNANTE** | Spiega ciò che supera la comprensione attuale | `conoscenza/GLOSSARIO.md` |
+| Nomignolo | Ruolo | Cosa fa | Dove scrive |
+| --- | --- | --- | --- |
+| **Sarta** 👗 | COSTRUTTRICE | Scrive e modifica il codice del sito | `index.html`, `css/`, `js/`, `images/` |
+| **Maestra** 📖 | INSEGNANTE | Spiega ciò che supera la comprensione attuale | `conoscenza/GLOSSARIO.md` |
+| **Stilista** 🎨 | REPARTO IMMAGINI | Crea loghi, immagini e proposte grafiche | `images/`, `conoscenza/LOGO_SASTYLE.md` |
 
 Regole di collaborazione:
 
-1. La chat **INSEGNANTE** scrive ogni concetto nuovo in `conoscenza/GLOSSARIO.md`,
-   una voce per termine, con linguaggio semplice e un'analogia.
-2. La chat **COSTRUTTRICE**, prima di prendere decisioni importanti, legge
-   `conoscenza/DIARIO.md` per non contraddire quanto già deciso.
+1. La chat **INSEGNANTE** (Maestra) scrive ogni concetto nuovo in
+   `conoscenza/GLOSSARIO.md`, una voce per termine, con linguaggio semplice e
+   un'analogia.
+2. La chat **COSTRUTTRICE** (Sarta), prima di prendere decisioni importanti,
+   legge `conoscenza/DIARIO.md` per non contraddire quanto già deciso.
 3. Dopo ogni avanzamento o decisione importante, **aggiorna
    `conoscenza/DIARIO.md`** (stato, decisioni, prossimi passi, domande aperte).
-4. Se una delle due chat impara qualcosa di utile all'altra, **lo scrive su file**:
+4. Se una delle chat impara qualcosa di utile a un'altra, **lo scrive su file**:
    è l'unico modo per "passarsi la memoria".
 
 ### I file di memoria (cartella `conoscenza/`)
@@ -73,7 +77,8 @@ Regole di collaborazione:
 | `DATI_ATTIVITA.md` | **⭐ Fonte di verità dei contenuti**: nome, contatti, orari, social, foto. Va consultato **prima di qualsiasi modifica al sito**. | COSTRUTTRICE |
 | `DATI_CLIENTE.md` | Il questionario (vuoto) da inviare alla cliente per raccogliere i dati | COSTRUTTRICE |
 | `DIARIO.md` | Stato del progetto, decisioni prese, prossimi passi, domande aperte | COSTRUTTRICE |
-| `GLOSSARIO.md` | Spiegazioni semplici dei termini, con analogie | INSEGNANTE |
+| `GLOSSARIO.md` | Spiegazioni semplici dei termini, con analogie | INSEGNANTE (Maestra) |
+| `LOGO_SASTYLE.md` | Descrizione del logo vero dell'insegna | REPARTO IMMAGINI (Stilista) |
 | `CHIEDERE_SPIEGAZIONI.md` | Come formulare le domande per farsi spiegare bene le cose | — |
 
 **Obbligo:** prima di modificare testi, contatti, orari o social sul sito,

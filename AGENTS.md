@@ -46,24 +46,25 @@ turnover): ci sono **argomenti saltati o appena accennati** dai programmi. Quind
 
 ---
 
-## 3. Come lavoriamo: due chat, un solo cervello
+## 3. Come lavoriamo: tre chat, un solo cervello
 
 Il progetto usa **sessioni OpenCode** che condividono la memoria tramite i file.
-Per consultarle velocemente, ogni chat ha un **nomignolo** (a tema sartoria),
-scelto con l'utente il 12/10/2026:
+Per consultarle velocemente, ogni chat ha un **nomignolo = nome del modello**
+usato (scelto con l'utente il 12/10/2026, così si risponde subito a "che modelli
+usano?"):
 
-| Nomignolo | Ruolo | Cosa fa | Dove scrive |
+| Nomignolo (modello) | Ruolo | Cosa fa | Dove scrive |
 | --- | --- | --- | --- |
-| **Sarta** 👗 | COSTRUTTRICE | Scrive e modifica il codice del sito | `index.html`, `css/`, `js/`, `images/` |
-| **Maestra** 📖 | INSEGNANTE | Spiega ciò che supera la comprensione attuale | `conoscenza/GLOSSARIO.md` |
-| **Stilista** 🎨 | REPARTO IMMAGINI | Crea loghi, immagini e proposte grafiche | `images/`, `conoscenza/LOGO_SASTYLE.md` |
+| **Big Pickle** 🥒 | COSTRUTTRICE (scrittore/coding) | Scrive e modifica il codice del sito | `index.html`, `css/`, `js/`, `images/` |
+| **Space Bunny** 🐰 | REPARTO IMMAGINI (multimediale) | Crea loghi, immagini e proposte grafiche | `images/`, `conoscenza/LOGO_SASTYLE.md` |
+| **LongCat** 🐈 | INSEGNANTE (lezioni/ripasso) | Spiega i concetti, aggiorna il glossario | `conoscenza/GLOSSARIO.md` |
 
 Regole di collaborazione:
 
-1. La chat **INSEGNANTE** (Maestra) scrive ogni concetto nuovo in
+1. La chat **INSEGNANTE** (LongCat) scrive ogni concetto nuovo in
    `conoscenza/GLOSSARIO.md`, una voce per termine, con linguaggio semplice e
    un'analogia.
-2. La chat **COSTRUTTRICE** (Sarta), prima di prendere decisioni importanti,
+2. La chat **COSTRUTTRICE** (Big Pickle), prima di prendere decisioni importanti,
    legge `conoscenza/DIARIO.md` per non contraddire quanto già deciso.
 3. Dopo ogni avanzamento o decisione importante, **aggiorna
    `conoscenza/DIARIO.md`** (stato, decisioni, prossimi passi, domande aperte).
@@ -74,11 +75,11 @@ Regole di collaborazione:
 
 | File | Contenuto | Chi lo aggiorna |
 | --- | --- | --- |
-| `DATI_ATTIVITA.md` | **⭐ Fonte di verità dei contenuti**: nome, contatti, orari, social, foto. Va consultato **prima di qualsiasi modifica al sito**. | COSTRUTTRICE |
-| `DATI_CLIENTE.md` | Il questionario (vuoto) da inviare alla cliente per raccogliere i dati | COSTRUTTRICE |
-| `DIARIO.md` | Stato del progetto, decisioni prese, prossimi passi, domande aperte | COSTRUTTRICE |
-| `GLOSSARIO.md` | Spiegazioni semplici dei termini, con analogie | INSEGNANTE (Maestra) |
-| `LOGO_SASTYLE.md` | Descrizione del logo vero dell'insegna | REPARTO IMMAGINI (Stilista) |
+| `DATI_ATTIVITA.md` | **⭐ Fonte di verità dei contenuti**: nome, contatti, orari, social, foto. Va consultato **prima di qualsiasi modifica al sito**. | COSTRUTTRICE (Big Pickle) |
+| `DATI_CLIENTE.md` | Il questionario (vuoto) da inviare alla cliente per raccogliere i dati | COSTRUTTRICE (Big Pickle) |
+| `DIARIO.md` | Stato del progetto, decisioni prese, prossimi passi, domande aperte | COSTRUTTRICE (Big Pickle) |
+| `GLOSSARIO.md` | Spiegazioni semplici dei termini, con analogie | INSEGNANTE (LongCat) |
+| `LOGO_SASTYLE.md` | Descrizione del logo vero dell'insegna | REPARTO IMMAGINI (Space Bunny) |
 | `CHIEDERE_SPIEGAZIONI.md` | Come formulare le domande per farsi spiegare bene le cose | — |
 
 **Obbligo:** prima di modificare testi, contatti, orari o social sul sito,

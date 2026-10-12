@@ -72,9 +72,11 @@ veri**: al momento sono testi e foto segnaposto.
       telefono, email, "Caselle Torinese (TO)", "solo su appuntamento", social
       Instagram + TikTok, tendina "Tipo di lavoro" rifatta.
 - [x] Logo: **solo la parola**, niente forbice (decisione dell'utente).
-- [x] **Nomignoli delle chat** (12/10/2026, scelti dall'utente): la COSTRUTTRICE
-      è la **Sarta** 👗, l'INSEGNANTE è la **Maestra** 📖, il REPARTO IMMAGINI
-      (la chat che crea loghi e immagini) è la **Stilista** 🎨.
+- [x] **Nomignoli delle chat** (12/10/2026, aggiornati dall'utente):
+      i nomignoli sono **i nomi dei modelli**, così l'utente risponde subito a
+      "che modelli usi?" — **Big Pickle** 🥒 = coding sito (COSTRUTTRICE),
+      **Space Bunny** 🐰 = immagini (REPARTO IMMAGINI), **LongCat** 🐈 =
+      lezioni/ripasso (INSEGNANTE).
 - [ ] **Link pagina Facebook**: manca l'indirizzo esatto (nel codice c'è un
       commento che lo segnala). Temporaneamente porta alla home di Facebook.
 - [ ] **WhatsApp**: si è usato lo stesso numero del telefono

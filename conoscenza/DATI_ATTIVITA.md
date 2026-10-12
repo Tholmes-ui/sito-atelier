@@ -4,8 +4,8 @@
 > Prima di modificare testi, contatti, orari o social in `index.html`,
 > **consulta qui**. Se un dato cambia, si aggiorna qui **e** sul sito.
 
-- **Stato raccolta dati:** 🔴 in corso (in attesa delle risposte della cliente)
-- **Ultimo aggiornamento:** —
+- **Stato raccolta dati:** 🟡 in corso (prime risposte ricevute)
+- **Ultimo aggiornamento:** 12 ottobre 2026 — nome dell'attività
 
 ---
 
@@ -13,11 +13,13 @@
 
 | Voce | Valore | Dove appare sul sito |
 | --- | --- | --- |
-| Nome attività | — *mancante* — | header, footer, titolo pagina |
-| Slogan / frase | — | (facoltativo) |
-| Descrizione breve (2–4 righe) | — | hero, sezione contatti |
-| Servizi offerti | — | hero, sezione contatti |
-| Partita IVA / C.F. | — | fondo pagina |
+| **Nome visualizzato (brand)** | **SàStyle Lab** | header, hero, footer, titolo pagina |
+| **Ragione sociale (registrata)** | SàStyle di Sabrina Napolitano | solo nella riga legale in fondo alla pagina |
+| **Titolare** | Sabrina Napolitano | presentazione |
+| Slogan / frase | — *mancante* — | (facoltativo) |
+| Descrizione breve (2–4 righe) | — *mancante* — | hero, sezione contatti |
+| Servizi offerti | — *mancante* — | hero, sezione contatti |
+| Partita IVA / C.F. | — *mancante* — | fondo pagina |
 
 ## 2. Contatti
 

@@ -67,6 +67,7 @@ veri**: al momento sono testi e foto segnaposto.
      **`--field` = #E8E8E8** in cima a `css/style.css`, così si ritocca solo il
      modulo senza toccare le altre cose. Al **focus** il campo torna bianco con
      bordo fucsia.
+     ✅ **Confermato dall'utente (12/10/2026)**: "#E8E8E8" va bene così.
 
 ## Decisioni prese
 
@@ -334,8 +335,8 @@ veri**: al momento sono testi e foto segnaposto.
 - ⏳ **Link della pagina Facebook** (footer): lo cerca l'utente di persona; per
   ora il pulsante porta alla home di Facebook.
 - ⏳ **Partita IVA**: arriva più avanti (segnaposto in fondo pagina).
-- ⏳ **Grigio dei campi del modulo**: ora `--field` = **#E8E8E8** (versione più
-  marcata, provata su richiesta dell'utente). Da confermare se va bene.
+- ✅ ~~**Grigio dei campi del modulo**~~: **RISOLTA** (12/10/2026) — l'utente ha
+  confermato che `--field` = **#E8E8E8** va bene così.
 - ⏳ **Palette bianco·nero·grigio·fucsia**: ancora **"in prova"**, da approvare.
 - ⏳ **Foto vere** dei lavori, al posto di quelle generate con l'AI.
 - ⏳ **Messaggio del modulo senza chiave**: da rendere amichevole (vedi sopra).

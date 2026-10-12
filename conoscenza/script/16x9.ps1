@@ -123,10 +123,9 @@ foreach ($f in $file) {
   $rect = New-Object System.Drawing.Rectangle 0, 0, $Larghezza, $Altezza
   $sfum = New-Object System.Drawing.Drawing2D.LinearGradientBrush $rect, $chiaro, $scuro, 90
   $g.FillRectangle($sfum, $rect)
-  # alone luminoso in alto al centro, come un fondo studio
-  $rAlone = [System.Drawing.Rectangle]::new(
-      [int]($Larghezza * 0.12), [int](-$Altezza * 0.35),
-      [int]($Larghezza * 0.76), [int]($Altezza * 1.1))
+  # alone luminoso dall'alto, come un fondo studio (copre tutta la larghezza,
+  # altrimenti resta una banda piu' scura ai lati)
+  $rAlone = [System.Drawing.Rectangle]::new(0, [int](-$Altezza * 0.30), $Larghezza, [int]($Altezza * 1.05))
   $sfum2 = [System.Drawing.Drawing2D.LinearGradientBrush]::new(
       $rAlone,
       [System.Drawing.Color]::FromArgb(58, 255, 255, 255),

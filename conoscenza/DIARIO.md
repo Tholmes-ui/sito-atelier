@@ -83,7 +83,10 @@ veri**: al momento sono testi e foto segnaposto.
       commento che lo segnala). Temporaneamente porta alla home di Facebook.
 - [ ] **WhatsApp**: si è usato lo stesso numero del telefono
       (`+39 331 357 5006`) — **da confermare** con la cliente.
-- [ ] **Orari**: non disponibili. Per ora il footer dice "su appuntamento".
+- [ ] **Orari**: la cliente non vuole orari specifici (su appuntamento). Ha
+      indicato la disponibilità generale: **nei giorni lavorativi lun–ven e il
+      sabato su richiesta** → aggiunto al footer ("Disponibilità: dal lunedì al
+      venerdì, sabato su richiesta"). Aggiornati `DATI_ATTIVITA.md` e sito.
 - [x] **Foto carosello** (12 ottobre 2026): sostituite con le foto inviate
       (ripulite dalle scritte in basso con un ritaglio automatico). ⚠️ **Nota:**
       sono **composizioni generate con Gemini**, NON foto reali dei lavori.

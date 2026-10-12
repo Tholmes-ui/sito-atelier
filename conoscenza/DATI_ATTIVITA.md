@@ -69,19 +69,22 @@ va rifatta su questi servizi (oggi contiene voci generiche).
 > Gli orari vanno quindi presentati come **orari di lavoro / disponibilità al
 > telefono**, non come orari di apertura di un negozio.
 
-## 3. Orari di apertura
+## 3. Orari — disponibilità (senza orari di apertura)
 
-| Giorno | Orario |
+> ⚠️ La cliente **non vuole orari specifici** sul sito: riceve solo su
+> appuntamento. Ha però indicato la **disponibilità generale** (12/10/2026).
+
+| Giorno | Disponibilità |
 | --- | --- |
-| Lunedì | — |
-| Martedì | — |
-| Mercoledì | — |
-| Giovedì | — |
-| Venerdì | — |
-| Sabato | — |
-| Domenica | — |
+| Lunedì – Venerdì | ✅ disponibile |
+| Sabato | ✅ **su richiesta** (disponibilità speciale) |
+| Domenica | — (da confermare) |
 
-Giorni di chiusura / note: —
+Giorni di chiusura / note: niente orari fissi; ricevimento **solo su
+appuntamento**.
+
+**Sul sito** (footer "Come lavoriamo"): "Disponibilità: dal lunedì al
+venerdì · sabato su richiesta".
 
 ## 4. Social
 

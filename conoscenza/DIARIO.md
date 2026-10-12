@@ -36,6 +36,16 @@ veri**: al momento sono testi e foto segnaposto.
    `@keyframes contattiLampoForm` (modulo, tramite pseudo-elemento `::after` che
    non disturba l'ombra del modulo). Rispetta "riduci animazioni". Verificato dal
    browser con test vero (nessun errore in console).
+8. **12/10/2026 — OTTIMIZZAZIONE del codice** (solo pulizia, aspetto identico):
+   - aggiunta `--accent-rgb` per non ripetere a mano il fucsia `rgba(230,0,126,…)`
+     in 13 punti; `--gold` ora rimanda a `--terracotta`;
+   - rimossi **codice morto** (`@keyframes heroZoom`, `.hero-slide.is-active img`)
+     e variabili mai usate (`--sand-2`, `--shadow-soft`);
+   - uniti due blocchi `.contact-facts` e portato `position: relative` dentro
+     `.contact-form`;
+   - JS: tolto il doppione `restart()` (=`start()`) e passato il modulo a
+     `initContactGlow(form)` evitando una seconda ricerca nel DOM.
+   Verificato nel browser: colori giusti, nessun errore, carosello e lampi OK.
 
 ## Decisioni prese
 

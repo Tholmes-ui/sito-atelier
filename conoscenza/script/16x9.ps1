@@ -139,26 +139,44 @@ foreach ($f in $file) {
     $g.Dispose(); $sfum.Dispose(); $sfum2.Dispose()
   } else {
     # ---- sfondo B: la stessa foto, sfocata, come fondo --------------------
-    # ATTENZIONE A NON DISTORCERE: non si stira mai. Si ritaglia il pezzo
-    # centrale con le proporzioni giuste usando il rettangolo sorgente, quindi
-    # la foto resta identica, solo piu' grande e sfocata.
+    # Due regole perche' non risulti "distorto":
+    #  1. non si stira MAI: si ritaglia il pezzo centrale con le proporzioni
+    #     giuste (rettangolo sorgente esplicito), quindi la foto resta identica;
+    #  2. si sfoca PRIMA di ingrandiare: si riduce a una manciata di pixel
+    #     (che fa la media dei colori) e solo dopo si riporta a 1600x900.
+    #     Cosi' sparisce ogni sagoma di cappotto: niente strisce, niente aloni.
     $s1 = [Math]::Max($Larghezza / $sw, $Altezza / $sh)
     $sxw = [Math]::Min($sw, $Larghezza / $s1)
     $sxh = [Math]::Min($sh, $Altezza  / $s1)
     $sxx = ($sw - $sxw) / 2
     $sxy = ($sh - $sxh) / 2
+
+    $piccolo = New-Object System.Drawing.Bitmap 96, 54      # 96x54 = esattamente 16:9
+    $piccolo.SetResolution(96, 96)
+    $g = [System.Drawing.Graphics]::FromImage($piccolo)
+    $g.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+    $g.PixelOffsetMode   = [System.Drawing.Drawing2D.PixelOffsetMode]::HighQuality
+    $g.DrawImage($src,
+      [System.Drawing.Rectangle]::new(0, 0, 96, 54),
+      [System.Drawing.Rectangle]::new([int]$sxx, [int]$sxy, [int]$sxw, [int]$sxh),
+      [System.Drawing.GraphicsUnit]::Pixel)
+    $g.Dispose()
+
     $sf = New-Object System.Drawing.Bitmap $Larghezza, $Altezza
     $sf.SetResolution(96, 96)
     $g = [System.Drawing.Graphics]::FromImage($sf)
     $g.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
     $g.PixelOffsetMode   = [System.Drawing.Drawing2D.PixelOffsetMode]::HighQuality
-    $g.DrawImage($src,
-      [System.Drawing.Rectangle]::new(0, 0, $Larghezza, $Altezza),
-      [System.Drawing.Rectangle]::new([int]$sxx, [int]$sxy, [int]$sxw, [int]$sxh),
-      [System.Drawing.GraphicsUnit]::Pixel)
-    $g.Dispose()
-    $sf = Sfoca $sf 3 30
-    $sf.SetResolution(96, 96)
+    $g.DrawImage($piccolo, 0, 0, $Larghezza, $Altezza)
+    $g.Dispose(); $piccolo.Dispose()
+
+    # Velo color crema del sito: stemperia le sagome sfocate dei capi, cosi'
+    # lo sfondo resta "la foto sfocata" ma non si vedono cappotti giganti.
+    $g = [System.Drawing.Graphics]::FromImage($sf)
+    $velo = New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(120, 251, 247, 242))
+    $g.FillRectangle($velo, 0, 0, $Larghezza, $Altezza)
+    $g.Dispose(); $velo.Dispose()
+
     $g = [System.Drawing.Graphics]::FromImage($tela)
     $g.DrawImage($sf, 0, 0)
     $g.Dispose(); $sf.Dispose()

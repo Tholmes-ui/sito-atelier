@@ -23,10 +23,10 @@
 :root {
   --cream: #FFFFFF;      /* bianco */
   --sand: #F4F4F4;       /* grigio chiaro */
-  --sand-2: #E8E8E8;     /* grigio */
-  --terracotta: #E6007E; /* fucsia */
+  --terracotta: #E6007E; /* fucsia (colore principale) */
   --terracotta-dark: #C2006B; /* fucsia scuro (hover) */
-  --gold: #E6007E;       /* fucsia (accenti) */
+  --gold: var(--terracotta);  /* fucsia (accenti: stessa tinta del principale) */
+  --accent-rgb: 230, 0, 126;  /* fucsia in forma "R, G, B" per le trasparenze */
   --ink: #0A0A0A;        /* nero */
   --muted: #757575;      /* grigio medio */
   --line: #D9D9D9;       /* grigio (bordi) */
@@ -35,7 +35,6 @@
   --radius: 18px;
   --radius-sm: 12px;
   --shadow: 0 22px 48px -26px rgba(0, 0, 0, 0.5);
-  --shadow-soft: 0 12px 30px -20px rgba(0, 0, 0, 0.45);
 
   --maxw: 1180px;
 
@@ -115,7 +114,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* I segnaposto da sostituire sono evidenziati in giallo:
    quando hai finito di personalizzare il sito, non ne deve restare nessuno. */
 .ph {
-  background: #FCE4F2;   /* prova colori: giallo -> fucsia chiaro */
+  background: rgba(var(--accent-rgb), 0.12);  /* fucsia chiaro */
   border-bottom: 1px dashed var(--gold);
   padding: 0 2px;
   border-radius: 3px;
@@ -141,7 +140,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .btn-primary {
   background: var(--terracotta);
   color: var(--white);
-  box-shadow: 0 14px 26px -16px rgba(230, 0, 126, 0.55);
+  box-shadow: 0 14px 26px -16px rgba(var(--accent-rgb), 0.55);
 }
 .btn-primary:hover { background: var(--terracotta-dark); color: var(--white); }
 
@@ -242,13 +241,6 @@ ul { margin: 0; padding: 0; list-style: none; }
   object-position: center;
   margin: 0 auto;
 }
-.hero-slide.is-active img { animation: none; }
-
-@keyframes heroZoom {
-  from { transform: scale(1.03); }
-  to   { transform: scale(1.12); }
-}
-
 /* Velo scuro sfumato per la leggibilità del testo */
 .hero-scrim {
   position: absolute;
@@ -278,7 +270,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   text-shadow: 0 2px 30px rgba(0, 0, 0, 0.35);
 }
 
-.hero-content .eyebrow { color: #E6007E; }
+.hero-content .eyebrow { color: var(--terracotta); }
 
 .hero-sub {
   font-size: 1.08rem;
@@ -351,7 +343,17 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 .contact-intro .lead { margin-bottom: 2rem; }
 
-.contact-facts { display: grid; gap: 1rem; }
+/* Effetto "si accende": quando si arriva qui dai link "Contatti",
+   la zona con telefono/email/WhatsApp emette un breve lampo fucsia.
+   (Il padding è compensato dal margine negativo, così la lista resta
+   allineata al resto della colonna, ma il lampo ha spazio per respirare.) */
+.contact-facts {
+  display: grid;
+  gap: 1rem;
+  padding: 0.8rem 0.9rem;
+  margin: -0.8rem -0.9rem;
+  border-radius: 16px;
+}
 .contact-facts li {
   display: flex;
   align-items: center;
@@ -361,36 +363,26 @@ ul { margin: 0; padding: 0; list-style: none; }
 .contact-facts a { color: var(--ink); }
 .contact-facts a:hover { color: var(--terracotta); }
 
-/* Effetto "si accende": quando si arriva qui dai link "Contatti",
-   la zona con telefono/email/WhatsApp emette un breve lampo fucsia.
-   (Il padding è compensato dal margine negativo, così la lista resta
-   allineata al resto della colonna, ma il lampo ha spazio per respirare.) */
-.contact-facts {
-  padding: 0.8rem 0.9rem;
-  margin: -0.8rem -0.9rem;
-  border-radius: 16px;
-}
 .contact-facts.is-lit { animation: contattiLampo 2s ease; }
 
 @keyframes contattiLampo {
   0% {
-    background-color: rgba(230, 0, 126, 0.18);
-    box-shadow: 0 0 0 8px rgba(230, 0, 126, 0.14), 0 0 34px 8px rgba(230, 0, 126, 0.38);
+    background-color: rgba(var(--accent-rgb), 0.18);
+    box-shadow: 0 0 0 8px rgba(var(--accent-rgb), 0.14), 0 0 34px 8px rgba(var(--accent-rgb), 0.38);
   }
   55% {
-    background-color: rgba(230, 0, 126, 0.09);
-    box-shadow: 0 0 0 5px rgba(230, 0, 126, 0.09), 0 0 20px 4px rgba(230, 0, 126, 0.22);
+    background-color: rgba(var(--accent-rgb), 0.09);
+    box-shadow: 0 0 0 5px rgba(var(--accent-rgb), 0.09), 0 0 20px 4px rgba(var(--accent-rgb), 0.22);
   }
   100% {
-    background-color: rgba(230, 0, 126, 0);
-    box-shadow: 0 0 0 0 rgba(230, 0, 126, 0), 0 0 0 0 rgba(230, 0, 126, 0);
+    background-color: rgba(var(--accent-rgb), 0);
+    box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0), 0 0 0 0 rgba(var(--accent-rgb), 0);
   }
 }
 
 /* Stesso effetto, ma sul MODULO: cliccando "Richiedi preventivo" (header, hero
    o footer) si illumina il riquadro da compilare. L'alone è disegnato da un
    elemento "fantasma" (::after) così non tocco l'ombra del modulo. */
-.contact-form { position: relative; }
 .contact-form::after {
   content: "";
   position: absolute;
@@ -398,7 +390,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   border-radius: inherit;
   pointer-events: none;   /* non blocca i click sui campi del modulo */
   opacity: 0;
-  box-shadow: 0 0 0 6px rgba(230, 0, 126, 0.38), 0 0 46px 12px rgba(230, 0, 126, 0.45);
+  box-shadow: 0 0 0 6px rgba(var(--accent-rgb), 0.38), 0 0 46px 12px rgba(var(--accent-rgb), 0.45);
 }
 .contact-form.is-lit::after { animation: contattiLampoForm 2s ease; }
 
@@ -421,6 +413,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* Modulo */
 .contact-form {
+  position: relative;   /* serve all'alone dell'effetto "si accende" */
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -461,7 +454,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   outline: none;
   background: var(--white);
   border-color: var(--terracotta);
-  box-shadow: 0 0 0 4px rgba(230, 0, 126, 0.15);
+  box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.15);
 }
 
 .check {

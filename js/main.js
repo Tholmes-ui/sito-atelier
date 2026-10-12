@@ -31,7 +31,7 @@
       b.setAttribute('aria-label', 'Vai alla foto ' + (i + 1));
       b.addEventListener('click', function () {
         goTo(i);
-        restart();
+        start();
       });
       dotsWrap.appendChild(b);
       return b;
@@ -62,10 +62,9 @@
         timer = null;
       }
     }
-    function restart() { start(); }
 
-    if (nextBtn) nextBtn.addEventListener('click', function () { next(); restart(); });
-    if (prevBtn) prevBtn.addEventListener('click', function () { prev(); restart(); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { next(); start(); });
+    if (prevBtn) prevBtn.addEventListener('click', function () { prev(); start(); });
 
     // Pausa quando il mouse è sopra o il carosello ha il focus
     root.addEventListener('mouseenter', stop);
@@ -75,8 +74,8 @@
 
     // Frecce della tastiera
     root.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowRight') { next(); restart(); }
-      if (e.key === 'ArrowLeft') { prev(); restart(); }
+      if (e.key === 'ArrowRight') { next(); start(); }
+      if (e.key === 'ArrowLeft') { prev(); start(); }
     });
 
     // Scorri con il dito su mobile
@@ -203,9 +202,8 @@
        - "Richiedi (un) preventivo"  -> si illumina il modulo da compilare.
      Così l'occhio cade subito sul punto giusto.
      ====================================================================== */
-  function initContactGlow() {
+  function initContactGlow(form) {
     var facts = document.querySelector('.contact-facts');
-    var form = document.getElementById('contact-form');
     if (!facts && !form) return;
 
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -254,6 +252,6 @@
 
     initReveal();
     initYear();
-    initContactGlow();
+    initContactGlow(form);
   });
 })();

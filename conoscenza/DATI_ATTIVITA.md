@@ -5,7 +5,7 @@
 > **consulta qui**. Se un dato cambia, si aggiorna qui **e** sul sito.
 
 - **Stato raccolta dati:** 🟡 in corso (prime risposte ricevute)
-- **Ultimo aggiornamento:** 12 ottobre 2026 — nome attività, servizi, telefono
+- **Ultimo aggiornamento:** 12 ottobre 2026 — nome attività, servizi, telefono, email
 
 ---
 
@@ -51,8 +51,8 @@ va rifatta su questi servizi (oggi contiene voci generiche).
 | Link telefono (`tel:`) | `tel:+393313575006` | contatti, footer, header |
 | Numero WhatsApp | ⏳ da confermare (è lo stesso del telefono?) | contatti, footer, social |
 | Link WhatsApp (`wa.me/…`) | ⏳ da confermare | contatti, footer |
-| Email | — *mancante* — | contatti, footer |
-| Email per Web3Forms | — *mancante* — | (solo nel modulo, non visibile) |
+| Email | **laboratorio.sastyle@gmail.com** | contatti, footer |
+| Email per Web3Forms | ⏳ probabilmente la stessa (da confermare) | (solo nel modulo, non visibile) |
 | Indirizzo completo | — *mancante* — | contatti, footer |
 | Link Google Maps | — | (facoltativo) |
 

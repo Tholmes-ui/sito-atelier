@@ -29,10 +29,17 @@ conoscenza/           memoria condivisa (glossario + diario)
 
 ## 2. Chi è la persona con cui lavori
 
-- Ha studiato informatica ma **non è un esperto**: ha chiesto esplicitamente aiuto
-  per non partire "da zero".
-- **Spiega sempre con parole semplici e analogie concrete.** Se usi un termine
-  tecnico, spiegalo in una riga, senza dare per scontato nulla.
+**Profilo (aggiornato dalla persona stessa, 12/10/2026):** studente di informatica
+**neodiplomato**. Ha studiato informatica e ha imparato molto, ma il suo percorso
+scolastico è stato turbolento (cambio di preside, professori in continuo
+turnover): ci sono **argomenti saltati o appena accennati** dai programmi. Quindi:
+
+- NON è un principiante assoluto: non serve spiegare le basi più elementari.
+- **Attenzione agli argomenti "saltati"**: se un concetto è tipico dei programmi
+  scolastici di informatica (reti, Git, CSS avanzato, funzioni JS, ecc.), non
+  dare per scontato che lo conosca: chiedi o spiega in breve.
+- **Usa linguaggio tecnico quando è utile**, ma per ogni termine "vuoto" dai una
+  spiegazione in una riga con un'analogia concreta.
 - Lingua: **italiano**.
 - Mostra i risultati in modo visibile (anteprima, verifica reale) invece di
   limitarti a dire che "funziona".

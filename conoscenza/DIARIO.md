@@ -89,7 +89,41 @@ veri**: al momento sono testi e foto segnaposto.
       ⚠️ **Aggiornamento:** il file `images/logo-sastyle.svg` **ora esiste**
       (trovato nella cartella e committato). Da decidere se usarlo nell'header
       al posto della scritta semplice "SàStyle Lab".
+- [x] **LOGO RICOSTRUITO** (12 ottobre 2026, questa chat): dalla foto
+      dell'insegna è stato rifatto il logo intero in **SVG vettoriale**.
+      - `images/logo-sastyle.svg` — versione **oro champagne** (per sfondi scuri)
+      - `images/logo-sastyle-inchiostro.svg` — versione **nera** (per lo sfondo crema del sito)
+      - `images/anteprima-logo-oro-su-scuro.png` e
+        `images/anteprima-logo-inchiostro-su-crema.png` — le anteprime
+      Le lettere **non sono testo**: sono disegnate (12 tracciati `<path>`,
+      36 KB), quindi il file si vede uguale su ogni computer e si può
+      ingrandire all'infinito senza perdere qualità. Font usati:
+      **Playfair Display** (nome) e **Questrial** (testo piccolo).
+      ⏳ **Non ancora usato nel sito**: header e footer mostrano ancora la
+      scritta semplice "SàStyle Lab" in carattere.
 - [ ] **P.IVA**: arriva più avanti (segnaposto rimasto in fondo pagina).
+- [ ] **Foto del carosello: attenzione alle proporzioni** (12 ottobre 2026).
+      Le 5 foto hanno forme diverse: foto-1, 2, 3 e 5 sono **verticali**,
+      **foto-4 è orizzontale** (1084x820). Nel carosello (che le mostra
+      intere, `object-fit: contain`) foto-4 sembrerà più piccola e "strana"
+      rispetto alle altre. Foto-2 e foto-3 hanno anche **scritte dentro**
+      ("prima/dopo/Non ti piace più?", "Qualunque tipo di personalizzazione"):
+      vanno bene per i social, meno per un sito.
+
+## Come è stato fatto il logo (per non rifarlo da capo)
+
+1. Dalla foto dell'insegna ho **misurato** la figura e i testi a occhio,
+   riportando tutto in **proporzioni** (larghezza spalle, vita, fianchi, gambe).
+2. Il generatore sta in `C:\Users\tommy\AppData\Local\Temp\opencode\logo-gen.html`.
+   Scarica i font TrueType da Google, e con la libreria **opentype.js**
+   **trasforma ogni lettera in un disegno** (così l'SVG non dipende dai font
+   installati sul computer di chi visita il sito).
+3. `rebuild.ps1` rimette dentro i font e ricostruisce la pagina;
+   un piccolo server (`server2.ps1`, porta 8732) fa salvare i risultati.
+4. `confronto.ps1` mette fianco a fianco la foto originale e la figura
+   ridisegnata: è il modo più veloce per capire cosa correggere.
+   ⚠️ Attenzione: i file in `%TEMP%\opencode` **si perdono** se il computer
+   viene spento o il sistema pulisce i temporanei. Se serve, rigenerare.
 
 ## Domande aperte (in attesa di risposta)
 

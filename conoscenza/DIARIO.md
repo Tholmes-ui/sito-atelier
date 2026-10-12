@@ -61,9 +61,12 @@ veri**: al momento sono testi e foto segnaposto.
      `.btn-label-short` = "Raccontaci" sotto i 720px. Verificato: su un telefono
      da 360px servono 276px su 320 disponibili → sta su **una riga**.
    - I **campi del modulo** (`input`, `select`, `textarea`) ora hanno sfondo
-     **grigio chiaro** `var(--sand)` (#F4F4F4) invece di bianco: prima, su una
-     scheda bianca, si vedevano solo i bordi. Al **focus** il campo torna
-     bianco con bordo fucsia.
+     **grigio** invece di bianco: prima, su una scheda bianca, si vedevano solo
+     i bordi. Prima prova troppo tenue (`--sand` = #F4F4F4, si vedeva appena),
+     poi su richiesta dell'utente è stato reso **più marcato**: nuova variabile
+     **`--field` = #E8E8E8** in cima a `css/style.css`, così si ritocca solo il
+     modulo senza toccare le altre cose. Al **focus** il campo torna bianco con
+     bordo fucsia.
 
 ## Decisioni prese
 
@@ -331,9 +334,8 @@ veri**: al momento sono testi e foto segnaposto.
 - ⏳ **Link della pagina Facebook** (footer): lo cerca l'utente di persona; per
   ora il pulsante porta alla home di Facebook.
 - ⏳ **Partita IVA**: arriva più avanti (segnaposto in fondo pagina).
-- ⏳ **Grigio dei campi del modulo**: ora `var(--sand)` = **#F4F4F4**. Da
-  confermare con l'utente se va bene o se lo vuole più marcato
-  (#EDEDED / #E8E8E8).
+- ⏳ **Grigio dei campi del modulo**: ora `--field` = **#E8E8E8** (versione più
+  marcata, provata su richiesta dell'utente). Da confermare se va bene.
 - ⏳ **Palette bianco·nero·grigio·fucsia**: ancora **"in prova"**, da approvare.
 - ⏳ **Foto vere** dei lavori, al posto di quelle generate con l'AI.
 - ⏳ **Messaggio del modulo senza chiave**: da rendere amichevole (vedi sopra).

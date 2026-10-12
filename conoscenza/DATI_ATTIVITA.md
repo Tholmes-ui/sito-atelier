@@ -5,7 +5,7 @@
 > **consulta qui**. Se un dato cambia, si aggiorna qui **e** sul sito.
 
 - **Stato raccolta dati:** 🟡 in corso (prime risposte ricevute)
-- **Ultimo aggiornamento:** 12 ottobre 2026 — nome, servizi, telefono, email, indirizzo, ritiro/consegna
+- **Ultimo aggiornamento:** 12 ottobre 2026 — nome, servizi, telefono, email, indirizzo, ritiro/consegna, social
 
 ---
 
@@ -87,10 +87,17 @@ Giorni di chiusura / note: —
 
 | Piattaforma | Link o nome utente |
 | --- | --- |
-| Instagram | — |
-| Facebook | — |
-| TikTok | — |
+| Instagram | `sastyle_lab` → `https://www.instagram.com/sastyle_lab/` |
+| Facebook | pagina **"SàStyle"** → ⏳ **serve il link esatto** (vedi nota) |
+| TikTok | `@sastylelab` → `https://www.tiktok.com/@sastylelab` |
 | Altri | — *mancante* — |
+
+> ℹ️ **Perché manca il link Facebook:** "SàStyle" è il **nome mostrato** della
+> pagina, non il suo indirizzo web. Gli indirizzi di Facebook non possono avere
+> la **à accentata**, quindi l'indirizzo vero è qualcosa tipo
+> `facebook.com/sastyle` oppure `facebook.com/profile.php?id=…`.
+> Serve che la signora (o tu) **apra la pagina e copi l'indirizzo dalla barra
+> del browser**.
 
 ## 5. Foto dei lavori
 

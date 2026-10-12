@@ -470,6 +470,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin: 0 0 0.6rem;
 }
 .footer-logo .ph { color: var(--ink); }
+.footer-logo .footer-y { color: var(--terracotta); }
 
 .footer-tag { max-width: 34ch; color: rgba(255, 255, 255, 0.62); }
 

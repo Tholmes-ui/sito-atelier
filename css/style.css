@@ -516,7 +516,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .footer-tag { max-width: 34ch; color: rgba(255, 255, 255, 0.62); }
 
 .footer-col h3 {
-  color: var(--white);
+  color: var(--terracotta);
   text-transform: uppercase;
   font-family: var(--font-body);
   font-size: 0.78rem;

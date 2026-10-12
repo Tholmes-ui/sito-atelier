@@ -33,6 +33,18 @@ veri**: al momento sono testi e foto segnaposto.
 - **Identità Git**: `King7Master <73787711+Tholmes-ui@users.noreply.github.com>`
   (email privata di GitHub per non pubblicare la Gmail).
 
+## Cosa ho imparato (appunti utili)
+
+- 🔍 **Le immagini non si vedono**: i modelli gratuiti disponibili qui
+  (longcat = "Big Pickle", mimo, step-5, ling, exo, space-bunny, nemotron,
+  muse-spark) **non accettano immagini in ingresso**. Cambiare modello **non**
+  serve per "vedere" le foto.
+- ✅ **Trucco usato al posto della vista**: uno script PowerShell con l'**OCR**
+  di Windows legge il **testo** dentro le immagini, e un altro script con
+  `System.Drawing` ne campiona i **colori** e la luminosità.
+- 🎨 **Il giudizio estetico è dell'utente**: lui prepara le proposte
+  (`logo-prova.html`), l'utente le guarda e sceglie. Nessun modello serve.
+
 ## Prossimi passi (da fare)
 
 1. **Sostituire i 14 segnaposto gialli** con i dati reali della signora:

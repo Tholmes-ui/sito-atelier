@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prove logo — SàStyle Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2A2320; --gold:#C9A24B; --terra:#A6503F; --cream:#FBF7F2;
+    --line:#E4D8CA; --muted:#6E5F57;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; padding:32px; background:var(--cream); color:var(--ink);
+    font-family:'Inter', system-ui, sans-serif;
+  }
+  h1{font-family:'Playfair Display', Georgia, serif; font-size:30px; margin:0 0 4px}
+  .intro{color:var(--muted); font-size:14px; margin:0 0 28px; line-height:1.6}
+  .card{
+    background:#fff; border:1px solid var(--line); border-radius:18px;
+    padding:34px 36px; margin:0 0 26px;
+    box-shadow:0 12px 30px -20px rgba(42,35,32,.45);
+  }
+  .card h2{
+    font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--muted); margin:0 0 22px; font-weight:600;
+  }
+  .logo-line{font-family:'Playfair Display', Georgia, serif; font-weight:700; line-height:1.25; white-space:nowrap}
+  .size-64{font-size:64px}
+  .size-36{font-size:36px}
+  .size-22{font-size:22px}
+  .dim{display:block; font-size:11px; color:var(--muted); margin-top:4px; font-family:'Inter',sans-serif}
+  .scissors{display:inline-block; width:.92em; height:1.28em; vertical-align:-.30em}
+  .scissors use{stroke:#2A2320}
+  .row{display:flex; gap:34px; flex-wrap:wrap; align-items:center}
+  .mark{width:56px; height:56px; border-radius:14px}
+  .mark use{stroke:#C9A24B}
+  .mark-big{width:88px; height:88px; border-radius:22px}
+  .mark-big use{stroke:#C9A24B}
+  .dark .scissors use{stroke:#C9A24B}
+  .two-lines{line-height:1.05}
+  .two-lines .sub{display:block; font-size:.34em; font-weight:500; letter-spacing:.42em; text-transform:uppercase; color:var(--muted); margin-top:.7em}
+  .tag{display:inline-block; font-size:11px; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+       background:#F3EAE0; border-radius:999px; padding:5px 12px; margin-bottom:14px; color:#8A3F31}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- FORBICE sottile (tratto leggero) -->
+    <symbol id="forbice-sottile" viewBox="0 0 30 44">
+      <g fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 31 C 13 22, 7 13, 5 8"/>
+        <path d="M15 31 C 17 22, 23 13, 25 8"/>
+        <circle cx="10" cy="38.5" r="3.2"/>
+        <circle cx="20" cy="38.5" r="3.2"/>
+        <circle cx="15" cy="31.4" r="1.1" fill="currentColor" stroke="none"/>
+      </g>
+    </symbol>
+    <!-- FORBICE piena (tratto spesso, anelli pieni) -->
+    <symbol id="forbice-piena" viewBox="0 0 30 44">
+      <g fill="none" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 30 C 13 21, 7 12, 5 7"/>
+        <path d="M15 30 C 17 21, 23 12, 25 7"/>
+        <circle cx="10" cy="38.5" r="3.6"/>
+        <circle cx="20" cy="38.5" r="3.6"/>
+      </g>
+    </symbol>
+    <!-- FORBICE oro (per la targhetta) -->
+    <symbol id="forbice-oro" viewBox="0 0 30 44">
+      <g fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 31 C 13 22, 7 13, 5 8"/>
+        <path d="M15 31 C 17 22, 23 13, 25 8"/>
+        <circle cx="10" cy="38.5" r="3.2"/>
+        <circle cx="20" cy="38.5" r="3.2"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<h1>SàStyle Lab — prove del logo</h1>
+<p class="intro">
+  Sotto ci sono tre proposte. La <b>forbice sostituisce la "y"</b> di "SàStyle",
+  come nel logo originale. Guardale e dimmi: quale ti piace di più?
+  Esempio di risposta: <i>"mi piace la 2 ma la forbice è troppo grossa"</i>.
+</p>
+
+<div class="card">
+  <span class="tag">Proposta 1</span>
+  <h2>Forbice sottile — elegante, tratto leggero</h2>
+  <div class="logo-line size-64">SàSt<svg class="scissors"><use href="#forbice-sottile"/></svg>le Lab</div>
+  <span class="dim">64px</span>
+</div>
+
+<div class="card">
+  <span class="tag">Proposta 2</span>
+  <h2>Forbice piena — decisa, tratto spesso</h2>
+  <div class="logo-line size-64">SàSt<svg class="scissors"><use href="#forbice-piena"/></svg>le Lab</div>
+  <span class="dim">64px</span>
+</div>
+
+<div class="card">
+  <span class="tag">Proposta 3</span>
+  <h2>Targhetta: forbice oro su terracotta + scritta</h2>
+  <div class="row">
+    <svg class="mark-big" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="16" fill="#A6503F"/>
+      <use href="#forbice-oro" transform="translate(19 13) scale(.95)"/>
+    </svg>
+    <div class="logo-line size-64 two-lines">
+      SàSt<svg class="scissors"><use href="#forbice-oro"/></svg>le
+      <span class="sub">Lab</span>
+    </div>
+  </div>
+  <span class="dim">qui la forbice è oro — come farebbe la targhetta dell'insegna</span>
+</div>
+
+<div class="card">
+  <span class="tag">Test dimensioni — Proposta 1</span>
+  <h2>Come appare a 64, 36 e 22 pixel (da grande a piccolo)</h2>
+  <div class="logo-line size-64">SàSt<svg class="scissors"><use href="#forbice-sottile"/></svg>le Lab</div>
+  <div class="logo-line size-36">SàSt<svg class="scissors"><use href="#forbice-sottile"/></svg>le Lab</div>
+  <div class="logo-line size-22">SàSt<svg class="scissors"><use href="#forbice-sottile"/></svg>le Lab</div>
+  <p class="intro" style="margin:14px 0 0">Il test serve a capire se la forbice resta leggibile anche piccola (es. nell'header del sito).</p>
+</div>
+
+<div class="card dark" style="background:#2A2320; border-color:#2A2320">
+  <span class="tag" style="background:#3a312c; color:#C9A24B">Versione su fondo scuro (com'è oggi il biglietto)</span>
+  <div class="logo-line size-64" style="color:#FBF7F2">SàSt<svg class="scissors"><use href="#forbice-sottile"/></svg>le Lab</div>
+  <span class="dim" style="color:#B8ABA1">se la targhetta ha sempre lo sfondo scuro, questa è la versione che vedremmo in negozio</span>
+</div>
+
+</body>
+</html>

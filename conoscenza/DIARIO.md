@@ -31,7 +31,7 @@ veri**: al momento sono testi e foto segnaposto.
 7. **Effetto "si accende" sui contatti** (`js/main.js` → `initContactGlow` +
    CSS). Cliccando un link che porta a `#contatti` scatta un breve lampo fucsia:
    - link **"Contatti"** → si illumina la zona **recapiti** (telefono·email·WhatsApp);
-   - link **"Richiedi (un) preventivo"** → si illumina il **modulo** da compilare.
+   - link **"Raccontaci il tuo progetto"** → si illumina il **modulo** da compilare.
    Il CSS distingue i due effetti: `@keyframes contattiLampo` (recapiti) e
    `@keyframes contattiLampoForm` (modulo, tramite pseudo-elemento `::after` che
    non disturba l'ombra del modulo). Rispetta "riduci animazioni". Verificato dal
@@ -46,6 +46,24 @@ veri**: al momento sono testi e foto segnaposto.
    - JS: tolto il doppione `restart()` (=`start()`) e passato il modulo a
      `initContactGlow(form)` evitando una seconda ricerca nel DOM.
    Verificato nel browser: colori giusti, nessun errore, carosello e lampi OK.
+9. **12/10/2026 — Testi dei pulsanti + campi del modulo grigi** (richieste
+   dell'utente):
+   - Il pulsante principale non dice più **"Richiedi (un) preventivo"** ma
+     **"Raccontaci il tuo progetto"** (header, hero e footer): suona più da
+     atelier e va bene sia per le creazioni sia per le riparazioni. Le frasi
+     discorsive con la parola "preventivo" sono rimaste: lì rassicurano sul
+     costo ("ti rispondo con un preventivo").
+     ⚠️ Aggiornato anche il **test dell'effetto lampo** in `js/main.js`
+     (`/progetto|preventivo/i`), altrimenti il modulo non si illuminava più.
+   - Nell'**header** la frase intera è troppo lunga per i telefoni (andava a
+     capo): il pulsante ora ha **due scritte** in `index.html` →
+     `.btn-label-full` = "Raccontaci il tuo progetto" sugli schermi larghi,
+     `.btn-label-short` = "Raccontaci" sotto i 720px. Verificato: su un telefono
+     da 360px servono 276px su 320 disponibili → sta su **una riga**.
+   - I **campi del modulo** (`input`, `select`, `textarea`) ora hanno sfondo
+     **grigio chiaro** `var(--sand)` (#F4F4F4) invece di bianco: prima, su una
+     scheda bianca, si vedevano solo i bordi. Al **focus** il campo torna
+     bianco con bordo fucsia.
 
 ## Decisioni prese
 
@@ -125,6 +143,12 @@ veri**: al momento sono testi e foto segnaposto.
       lavoriamo" e "Link utili" passano da **bianco** a **fucsia** in
       `css/style.css` (`.footer-col h3` → `color: var(--terracotta)`, #E6007E).
       Verificato nel browser: colore calcolato `rgb(230, 0, 126)` su tutti e tre.
+- [x] **Testo dei pulsanti** (12/10/2026): da "Richiedi (un) preventivo" a
+      **"Raccontaci il tuo progetto"** su **header, hero e footer** (scelta
+      dell'utente). Aggiornato anche il JS dell'effetto lampo
+      (`/progetto|preventivo/i`), altrimenti cliccando il pulsante il modulo
+      non si illuminava più. Le frasi discorsive con la parola "preventivo"
+      sono rimaste: lì rassicurano ("ti rispondo con un preventivo").
 - [x] **Orari**: la cliente non vuole orari specifici (su appuntamento). Ha
       indicato la disponibilità generale **nei giorni lavorativi lun–ven**.
       Il sabato (su richiesta) esiste ma **per ora non si pubblica** (richiesta
@@ -142,6 +166,23 @@ veri**: al momento sono testi e foto segnaposto.
       ⚠️ **Aggiornamento:** il file `images/logo-sastyle.svg` **ora esiste**
       (trovato nella cartella e committato). Da decidere se usarlo nell'header
       al posto della scritta semplice "SàStyle Lab".
+- [x] **Scritta "Non ti piace piu'?" tolta dalla foto 2** (12/10/2026,
+      Coniglietto Spaziale, su richiesta dell'utente): era bianca sul parquet
+      in fondo e gia' tagliata a meta'. Ora e' **eliminata del tutto**.
+      Script: `conoscenza\script\togli-scritta.ps1` - cerca nell'ultimo 20% della
+      foto le righe con almeno 20 pixel bianchi (soglia 205) e ritaglia la foto
+      appena sopra, con margine di 18 px. Foto 2: 768x1160 -> **768x1112**
+      (tagliati 48 px di solo parquet; cappotti e stativi intatti).
+      Due trappole superate: (1) la prima versione tagliava 7px e non bastava,
+      perche' la scrittura era gia' tagliata dall'inizio; (2) la seconda
+      tagliava 528px, perche' beccava la **linea bianca verticale** che in
+      mezzo alla foto divide "prima" e "dopo". Da li' la scelta di limitare la
+      ricerca all'ultimo 20% e di alzare la soglia a 20 pixel per riga.
+      Restano le parole "prima" / "dopo": non sono la scritta tagliata, sono
+      utili al confronto e sono integre. Se servono via anche, si ritaglia in
+      alto oppure si copre quella fascia.
+      Foto 2 rigenerata in entrambe le versioni e reinstallata nel sito.
+
 - [x] **DUE VERSIONI DEL CAROSELLO** (12 ottobre 2026, Coniglietto Spaziale,
       su richiesta dell'utente): entrambe **1600 x 900**, capo intero e
       centrato, nessuna distorsione.

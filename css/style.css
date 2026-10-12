@@ -153,6 +153,11 @@ ul { margin: 0; padding: 0; list-style: none; }
 .btn-ghost:hover { background: rgba(255, 255, 255, 0.95); color: var(--ink); }
 
 .btn-small { padding: 0.6rem 1.1rem; font-size: 0.9rem; }
+
+/* Nel pulsante dell'header la scritta è doppia: la versione intera
+   ("Raccontaci il tuo progetto") compare sugli schermi larghi, sui telefoni
+   si usa quella corta ("Raccontaci") per non mandarla a capo. */
+.btn-label-short { display: none; }
 .btn-block { width: 100%; }
 
 .btn:disabled { opacity: 0.6; cursor: progress; transform: none; }
@@ -380,7 +385,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
 }
 
-/* Stesso effetto, ma sul MODULO: cliccando "Richiedi preventivo" (header, hero
+/* Stesso effetto, ma sul MODULO: cliccando "Raccontaci il tuo progetto" (header, hero
    o footer) si illumina il riquadro da compilare. L'alone è disegnato da un
    elemento "fantasma" (::after) così non tocco l'ombra del modulo. */
 .contact-form::after {
@@ -441,7 +446,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   width: 100%;
   padding: 0.8rem 0.95rem;
   color: var(--ink);
-  background: var(--cream);
+  background: var(--sand);   /* grigio chiaro: i campi si staccano dalla scheda bianca */
   border: 1.5px solid var(--line);
   border-radius: var(--radius-sm);
   transition: border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
@@ -579,6 +584,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   body { font-size: 16px; }
 
   .site-nav a:not(.btn) { display: none; } /* su mobile restano logo + bottone */
+
+  /* Pulsante dell'header: sui telefoni uso la scritta corta (vedi .btn-label-* in alto) */
+  .btn-label-full { display: none; }
+  .btn-label-short { display: inline; }
 
   .hero-content { padding-block: 4rem 5.5rem; }
   .hero-nav { width: 42px; height: 42px; }

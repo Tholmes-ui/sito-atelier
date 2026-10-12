@@ -5,7 +5,7 @@
 > **consulta qui**. Se un dato cambia, si aggiorna qui **e** sul sito.
 
 - **Stato raccolta dati:** 🟡 in corso (prime risposte ricevute)
-- **Ultimo aggiornamento:** 12 ottobre 2026 — nome attività, servizi, telefono, email, indirizzo
+- **Ultimo aggiornamento:** 12 ottobre 2026 — nome, servizi, telefono, email, indirizzo, ritiro/consegna
 
 ---
 
@@ -111,7 +111,9 @@ Giorni di chiusura / note: —
 - **Recensioni:** —
 - **FAQ:** —
 - **Metodi di pagamento:** —
-- **Zone servite / ritiro e consegna:** —
+- **Ritiro e consegna:** ✅ **i clienti portano i capi di persona e li ritirano loro**
+  (su appuntamento). Nessun ritiro a domicilio, nessuna spedizione.
+  → Da trasformare in una frase per il sito (sezione contatti / FAQ).
 
 ## 7. Note legali
 

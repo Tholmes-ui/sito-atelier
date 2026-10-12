@@ -54,6 +54,9 @@ veri**: al momento sono testi e foto segnaposto.
       Niente mappa.
 - [ ] **Orari**: presentarli come *disponibilità*, non come orari di negozio
       (non c'è un negozio aperto al pubblico).
+- [ ] **Come funziona (ritiro/consegna)**: aggiungere ai contatti una frase del
+      tipo *"Mi porti il capo di persona, su appuntamento, e vieni a riprenderlo
+      quando è pronto. Nessun ritiro a domicilio né spedizione."* ✔ dato confermato.
 
 ## Domande aperte (in attesa di risposta)
 

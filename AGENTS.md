@@ -59,6 +59,20 @@ Regole di collaborazione:
 4. Se una delle due chat impara qualcosa di utile all'altra, **lo scrive su file**:
    è l'unico modo per "passarsi la memoria".
 
+### I file di memoria (cartella `conoscenza/`)
+
+| File | Contenuto | Chi lo aggiorna |
+| --- | --- | --- |
+| `DATI_ATTIVITA.md` | **⭐ Fonte di verità dei contenuti**: nome, contatti, orari, social, foto. Va consultato **prima di qualsiasi modifica al sito**. | COSTRUTTRICE |
+| `DATI_CLIENTE.md` | Il questionario (vuoto) da inviare alla cliente per raccogliere i dati | COSTRUTTRICE |
+| `DIARIO.md` | Stato del progetto, decisioni prese, prossimi passi, domande aperte | COSTRUTTRICE |
+| `GLOSSARIO.md` | Spiegazioni semplici dei termini, con analogie | INSEGNANTE |
+| `CHIEDERE_SPIEGAZIONI.md` | Come formulare le domande per farsi spiegare bene le cose | — |
+
+**Obbligo:** prima di modificare testi, contatti, orari o social sul sito,
+leggi `conoscenza/DATI_ATTIVITA.md` e usa quei valori. Se un dato lì è
+*mancante*, chiedilo all'utente invece di inventarlo.
+
 ---
 
 ## 4. Convenzioni sul codice

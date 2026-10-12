@@ -121,6 +121,10 @@ veri**: al momento sono testi e foto segnaposto.
       contatti** (era identica a quella sbagliata). Instagram e Facebook
       invariati. Verificato nel browser misurando i `getBBox` (tracciati non
       vuoti) e con una pagina di anteprima prima/dopo.
+- [x] **Titoli del footer in fucsia** (12/10/2026): "Dove trovarmi", "Come
+      lavoriamo" e "Link utili" passano da **bianco** a **fucsia** in
+      `css/style.css` (`.footer-col h3` → `color: var(--terracotta)`, #E6007E).
+      Verificato nel browser: colore calcolato `rgb(230, 0, 126)` su tutti e tre.
 - [x] **Orari**: la cliente non vuole orari specifici (su appuntamento). Ha
       indicato la disponibilità generale **nei giorni lavorativi lun–ven**.
       Il sabato (su richiesta) esiste ma **per ora non si pubblica** (richiesta
